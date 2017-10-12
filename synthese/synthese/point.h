@@ -1,3 +1,7 @@
+#include<ostream>
+
+using namespace std;
+
 class Point{
 private :
 	double _x, _y;
@@ -24,4 +28,9 @@ public :
 
 #pragma endregion getters/setters
 
+	bool operator=(const Point&);
+
+	friend ostream& operator<<(ostream&, const Point&);
+
+	Point operator+(const Point&);
 };
