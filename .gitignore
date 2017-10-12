@@ -1,8 +1,8 @@
 
-synthese/synthese.opensdf
-synthese/synthese.sdf
-synthese/synthese.v12.suo
-synthese/synthese.sln
+*.opensdf
+*.sdf
+*.v12.suo
+*.sln
 *.exe
 *.ilk
 *.pdb
