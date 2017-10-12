@@ -10,3 +10,6 @@
 *.tlog
 *.obj
 *.idb
+synthese/synthese/synthese.vcxproj
+*.vcxproj
+*.filters

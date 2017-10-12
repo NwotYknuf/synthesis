@@ -12,6 +12,7 @@ public:
 	Vecteur2D();
 	Vecteur2D(const Vecteur2D & vecteur);
 	Vecteur2D(int x1, int y1, int x2, int y2);
+	Vecteur2D(const Point & p1, const  Point & p2);
 	virtual ~Vecteur2D();
 #pragma endregion Constructeurs
 
