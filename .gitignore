@@ -3,5 +3,10 @@ synthese/synthese.opensdf
 synthese/synthese.sdf
 synthese/synthese.v12.suo
 synthese/synthese.sln
-synthese/synthese/synthese.vcxproj
-synthese/synthese/synthese.vcxproj.filters
+*.exe
+*.ilk
+*.pdb
+*.log
+*.tlog
+*.obj
+*.idb
