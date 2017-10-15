@@ -1,7 +1,6 @@
 #pragma once
 #include"point.h"
 
-
 Point::Point(){
 	_x = _y = 0;
 }
@@ -16,14 +15,26 @@ Point::Point(const Point &p){
 	_y = p._y;
 }
 
-bool Point::operator=(const Point&p){
+Point::~Point(){ }
+
+Point Point::operator=(const Point &p)const  {
+	return Point(p._x, p._y);
+}
+
+bool Point::operator==(const Point&p) const {
 	return (_y == p._y && _x == p._x);
 }
 
 ostream& operator<<(ostream& os, const Point&p){
-	os << p._x << " : " << p._y;
+	os << "(" << p._x << ", " << p._y << ")";
+	return os;
 }
 
-Point Point::operator+(const Point &p){
-	Point res(_x + p._x, _y + p._y);
+Point Point::operator+(const Point &p) const {
+	
+	return Point(_x + p._x, _y + p._y);
+}
+
+Point Point::operator-(const Point &p) const {
+	return Point(_x - p._x, _y - p._y);
 }

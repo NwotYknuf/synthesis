@@ -2,26 +2,26 @@
 #include "point.h"
 #include <stdio.h>
 #include <stdlib.h>
+
 class Vecteur2D
 {
 private:
 	Point _p1;
 	Point _p2;
+
 public:
-#pragma region Constructeurs
 	Vecteur2D();
-	Vecteur2D(const Vecteur2D & vecteur);
-	Vecteur2D(int x1, int y1, int x2, int y2);
+	Vecteur2D(const Vecteur2D & v);
+	Vecteur2D(double, double, double, double);
 	Vecteur2D(const Point & p1, const  Point & p2);
 	virtual ~Vecteur2D();
-#pragma endregion Constructeurs
 
-#pragma region Getters / Setters
-	Point getP1();
-	Point getP2();
+	const Point& getP1()const { return _p1; }
+	const Point& getP2()const { return _p2; }
+	void setP1(const Point &p1) { _p1 = p1; }
+	void setP2(const Point &p2) { _p2 = p2; }
 
-	void setP1();
-	void setP2();
-#pragma endregion Getters / Setters
+	Vecteur2D operator=(const Vecteur2D&) const;
+	friend ostream& operator<<(ostream&, const Vecteur2D&);
+	Vecteur2D operator+(const Vecteur2D&) const;
 };
-
