@@ -10,16 +10,8 @@
 *.tlog
 *.obj
 *.idb
-synthese/synthese/synthese.vcxproj
 *.vcxproj
 *.filters
-synthese/.vs/synthese/v14/.suo
+*.suo
 *.db
 *.opendb
-*.vcxproj
-*.filters
-*.vcxproj
-*.filters
-*.vcxproj
-*.filters
-*.vcxproj
