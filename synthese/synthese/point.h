@@ -18,7 +18,7 @@ public :
 	void setX(double x){ _x = x; }
 	void setY(double y){ _y = y; }
 
-	Point operator=(const Point&)const;
+	Point operator=(const Point&);
 	bool operator==(const Point&)const;
 	friend ostream& operator<<(ostream&, const Point&);
 	Point operator+(const Point&)const;

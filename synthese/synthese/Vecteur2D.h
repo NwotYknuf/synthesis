@@ -21,7 +21,7 @@ public:
 	void setP1(const Point &p1) { _p1 = p1; }
 	void setP2(const Point &p2) { _p2 = p2; }
 
-	Vecteur2D operator=(const Vecteur2D&) const;
+	Vecteur2D operator=(const Vecteur2D&);
 	friend ostream& operator<<(ostream&, const Vecteur2D&);
 	Vecteur2D operator+(const Vecteur2D&) const;
 };

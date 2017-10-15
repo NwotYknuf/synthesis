@@ -2,6 +2,8 @@
 #include "point.h"
 #include "Vecteur2D.h"
 #include <iostream>
+#include <string>
+#include "DessineVisiteur.h"
 
 int main(){
 
@@ -24,7 +26,13 @@ int main(){
 
 	cout << "v3 = " << v3 << endl;
 
+	Cercle c("red", p1, 12);
+
+	DessineVisiteur test;
+	test.visite(&c);
 	system("pause");
+
+	
 
 	return 0;
 }

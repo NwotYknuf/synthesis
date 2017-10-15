@@ -16,7 +16,7 @@ Vecteur2D::~Vecteur2D() { }
 Vecteur2D::Vecteur2D(const Vecteur2D& v)
 	: _p1(v._p1), _p2(v._p2) {}
 
-Vecteur2D Vecteur2D :: operator=(const Vecteur2D& v) const {
+Vecteur2D Vecteur2D :: operator=(const Vecteur2D& v) {
 	return Vecteur2D(v);
 }
 

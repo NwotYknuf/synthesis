@@ -17,7 +17,7 @@ Point::Point(const Point &p){
 
 Point::~Point(){ }
 
-Point Point::operator=(const Point &p)const  {
+Point Point::operator=(const Point &p)  {
 	return Point(p._x, p._y);
 }
 
