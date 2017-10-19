@@ -8,7 +8,9 @@ using namespace std;
 
 class Triangle : public Forme, public Visitable{
 private:
-	Point _points[3];
+	Point _p1;
+	Point _p2;
+	Point _p3;
 	Triangle();
 
 public:
@@ -16,7 +18,6 @@ public:
 	virtual ~Triangle();
 	Triangle(const string, const Point &, const Point&, const Point&);
 
-	const Point& getPoint(int);
-	
-	void accepter(const Visiteur&);
+	void accepte(const Visiteur&);
+	void affiche(ostream&);
 };

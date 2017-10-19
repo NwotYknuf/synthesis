@@ -34,8 +34,7 @@ void Cercle::affiche(ostream&os)const {
 	os << " centre : " << _centre << " rayon : " << _rayon;
 }
 
-void Cercle::accepte(const Visiteur &v)
-{
+void Cercle::accepte(const Visiteur &v){
 	v.visite(this);
 }
 
