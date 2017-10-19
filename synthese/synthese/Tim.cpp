@@ -34,8 +34,6 @@ int main(){
 
 	cout << "cc Julien" << endl;
 	system("pause");
-
 	
-
 	return 0;
 }
