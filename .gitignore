@@ -15,3 +15,7 @@
 *.suo
 *.db
 *.opendb
+*.ipch
+*.tmp
+*.vcxproj
+*.filters

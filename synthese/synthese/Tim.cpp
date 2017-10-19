@@ -31,6 +31,8 @@ int main(){
 
 	DessineVisiteur pablopicasso;
 	pablopicasso.visite(&c);
+
+	cout << "cc Julien" << endl;
 	system("pause");
 
 	
