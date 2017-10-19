@@ -32,7 +32,7 @@ int main(){
 	DessineVisiteur pablopicasso;
 	pablopicasso.visite(&c);
 
-	cout << "cc Julien" << endl;
+	cout << "goo.gl/QNUuZs" << endl;
 	system("pause");
 
 	
