@@ -8,5 +8,6 @@ private:
 public :
 	DessineVisiteur();
 
-	void visite(Cercle*)const;
+	void visite(const Cercle*)const;
+	void visite(const Triangle*)const;
 };

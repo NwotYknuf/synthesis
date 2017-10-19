@@ -34,8 +34,6 @@ int main(){
 
 	cout << "goo.gl/QNUuZs" << endl;
 	system("pause");
-
 	
-
 	return 0;
 }
