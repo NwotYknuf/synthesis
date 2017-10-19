@@ -4,5 +4,5 @@ class Visiteur;
 
 class Visitable {
 public:
-	virtual void accepte(const class Visiteur&) = 0;
+	virtual void accepte(const Visiteur&) = 0;
 };

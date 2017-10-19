@@ -12,5 +12,5 @@ void DessineVisiteur::visite(const Cercle* c)const {
 }
 
 void DessineVisiteur::visite(const Triangle* t)const {
-	cout << "Je dessine le triangle : " << *t << endl;
+	cout << "Je dessine le triangle : " << (Forme*)t << endl;
 }
