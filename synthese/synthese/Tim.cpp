@@ -1,6 +1,7 @@
 #pragma once
 #include "point.h"
 #include "Vecteur2D.h"
+#include "Cercle.h"
 #include <iostream>
 #include <string>
 #include "DessineVisiteur.h"
@@ -28,8 +29,8 @@ int main(){
 
 	Cercle c("red", p1, 12);
 
-	DessineVisiteur test;
-	test.visite(&c);
+	DessineVisiteur pablopicasso;
+	pablopicasso.visite(&c);
 	system("pause");
 
 	

@@ -1,5 +1,6 @@
 #pragma once
 #include "Cercle.h"
+#include "Visiteur.h"
 
 Cercle::Cercle() : Forme(), _centre(){
 	_rayon = 0;

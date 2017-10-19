@@ -1,9 +1,10 @@
 #pragma once
-#include "Cercle.h"
+
+class Cercle;
 
 class Visiteur {
 private:
 
 public:
-	virtual void visite(class Cercle*)const = 0; // ???????????!!!
+	virtual void visite(Cercle*)const = 0;
 };

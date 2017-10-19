@@ -2,7 +2,8 @@
 #include "point.h"
 #include "forme.h"
 #include "Visitable.h"
-#include "Visiteur.h"
+
+class Visiteur;
 
 class Cercle : public Forme, public Visitable{
 private:

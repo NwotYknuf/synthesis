@@ -1,5 +1,6 @@
 #pragma once
-#include "Visiteur.h"
+
+class Visiteur;
 
 class Visitable {
 public:
