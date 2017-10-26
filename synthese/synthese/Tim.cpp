@@ -5,8 +5,10 @@
 #include <iostream>
 #include <string>
 #include "DessineVisiteur.h"
+#include "Triangle.h"
 
 int main(){
+	//goo.gl/QNUuZs
 
 	Point p1(1, 1);
 	Point p2(2,1);
@@ -28,11 +30,12 @@ int main(){
 	cout << "v3 = " << v3 << endl;
 
 	Cercle c("red", p1, 12);
-
+	Triangle t("blue", p1, p2, p3);
 	DessineVisiteur pablopicasso;
-	pablopicasso.visite(&c);
 
-	cout << "goo.gl/QNUuZs" << endl;
+	pablopicasso.visite(&c);
+	pablopicasso.visite(&t);
+
 	system("pause");
 	
 	return 0;

@@ -2,6 +2,7 @@
 #include "DessineVisiteur.h"
 #include <iostream>
 #include "Cercle.h"
+#include "Triangle.h"
 
 using namespace std;
 
@@ -12,5 +13,5 @@ void DessineVisiteur::visite(const Cercle* c)const {
 }
 
 void DessineVisiteur::visite(const Triangle* t)const {
-	cout << "Je dessine le triangle : " << (Forme*)t << endl;
+	cout << "Je dessine le triangle : " << *t << endl;
 }

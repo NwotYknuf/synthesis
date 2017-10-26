@@ -23,7 +23,6 @@ public:
 	void setRayon(double d) { _rayon = d; }
 
 	bool operator==(const Cercle &c);
-	friend ostream& operator<<(ostream&, const Cercle&);
 
 	void affiche(ostream&)const;
 	void accepte(const Visiteur &);

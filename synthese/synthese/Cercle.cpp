@@ -24,11 +24,6 @@ bool Cercle::operator==(const Cercle &c){
 	return _centre == c._centre && _rayon == c._rayon;
 }
 
-ostream& operator<<(ostream&os, const Cercle&c) {
-	c.affiche(os);
-	return os;
-}
-
 void Cercle::affiche(ostream&os)const {
 	Forme::affiche(os);
 	os << " centre : " << _centre << " rayon : " << _rayon;
@@ -37,4 +32,3 @@ void Cercle::affiche(ostream&os)const {
 void Cercle::accepte(const Visiteur &v){
 	v.visite(this);
 }
-
