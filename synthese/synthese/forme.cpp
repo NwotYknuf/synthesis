@@ -7,7 +7,7 @@ Forme::Forme()
 {
 }
 
-Forme::Forme(string c) {
+Forme::Forme(const string &c) {
 	_couleur = c;
 }
 
@@ -30,5 +30,5 @@ ostream& operator<<(ostream &os, const Forme &f) {
 }
 
 void Forme::affiche(ostream& os)const {
-	os << "couleur : " <<  _couleur;
+	os << "	-couleur : " <<  _couleur << endl;
 }

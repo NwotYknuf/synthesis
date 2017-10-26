@@ -11,7 +11,7 @@ private:
 
 public:
 	Forme();
-	Forme(string);
+	Forme(const string&);
 	Forme(const Forme&);
 	virtual ~Forme();
 

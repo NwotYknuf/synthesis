@@ -2,33 +2,34 @@
 #include "Cercle.h"
 #include "Visiteur.h"
 
-Cercle::Cercle() : Forme(), _centre(){
+Cercle::Cercle() : Forme(), _centre() {
 	_rayon = 0;
 }
 
-Cercle::Cercle(string c, double x, double y, double rayon): Forme(c),_centre(x,y) {
+Cercle::Cercle(string c, double x, double y, double rayon) : Forme(c), _centre(x, y) {
 	_rayon = rayon;
 }
 
-Cercle::Cercle(string c, const Point &p, double rayon) : Forme(c), _centre(p) {
+Cercle::Cercle(string c, const Vecteur2D &p, double rayon) : Forme(c), _centre(p) {
 	_rayon = rayon;
 }
 
-Cercle::Cercle(const Cercle &c): Forme(c.getCouleur()), _centre(c._centre) {
+Cercle::Cercle(const Cercle &c) : Forme(c.getCouleur()), _centre(c._centre) {
 	_rayon = c._rayon;
 }
 
 Cercle::~Cercle() { }
 
-bool Cercle::operator==(const Cercle &c){
+bool Cercle::operator==(const Cercle &c) {
 	return _centre == c._centre && _rayon == c._rayon;
 }
 
 void Cercle::affiche(ostream&os)const {
 	Forme::affiche(os);
-	os << " centre : " << _centre << " rayon : " << _rayon;
+	os << "	-centre : " << _centre << endl;
+	os << "	-rayon : " << _rayon << endl;
 }
 
-void Cercle::accepte(const Visiteur &v){
+void Cercle::accepte(const Visiteur &v) {
 	v.visite(this);
 }

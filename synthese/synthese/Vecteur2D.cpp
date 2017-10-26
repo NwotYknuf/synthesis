@@ -1,30 +1,48 @@
 #pragma once
 #include "Vecteur2D.h"
-#include "Point.h"
 
-Vecteur2D::Vecteur2D()
-	: _p1(), _p2() {}
+Vecteur2D::Vecteur2D(){
+	_x = 0;
+	_y = 0;
+}
 
-Vecteur2D::Vecteur2D(double x1, double y1, double x2, double y2)
-	: _p1(x1, y1), _p2(x2, y2) {}
+Vecteur2D::Vecteur2D(const Vecteur2D & v){
+	_x = v._x;
+	_y = v._y;
+}
 
-Vecteur2D::Vecteur2D(const Point &p1, const Point &p2)
-	: _p1(p1), _p2(p2) {}
+Vecteur2D::Vecteur2D(double x, double y){
+	_x = x;
+	_y = y;
+}
 
 Vecteur2D::~Vecteur2D() { }
 
-Vecteur2D::Vecteur2D(const Vecteur2D& v)
-	: _p1(v._p1), _p2(v._p2) {}
-
-Vecteur2D Vecteur2D :: operator=(const Vecteur2D& v) {
-	return Vecteur2D(v);
+Vecteur2D Vecteur2D::operator=(const Vecteur2D &v){
+	_x = v._x;
+	_y = v._y;
+	return *this;
 }
 
-ostream& operator<<(ostream &os, const Vecteur2D &v) {
-	os << "origine : " << v._p1 << ", " << v._p2 - v._p1;
+bool Vecteur2D::operator==(const Vecteur2D &v){
+	return _x == v._x && _y == v._y;
+}
+
+ostream& operator<<(ostream &os, const Vecteur2D &v){
+	os << "(" << v._x << ", " << v._y << ")";
 	return os;
 }
 
-Vecteur2D Vecteur2D::operator+(const Vecteur2D &v) const {
-	return Vecteur2D(_p1, _p2 + v._p2 - v._p1);
+Vecteur2D Vecteur2D::operator+(const Vecteur2D &v) const{
+	return Vecteur2D(_x + v._x, _y + v._y);
+}
+
+Vecteur2D Vecteur2D::operator-(const Vecteur2D &v) const
+{
+	return Vecteur2D(_x - v._x, _y - v._y);
+}
+
+Vecteur2D Vecteur2D::operator*(double d) const
+{
+	return Vecteur2D(_x*d, _y*d);
 }

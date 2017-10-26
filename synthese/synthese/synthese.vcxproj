@@ -149,7 +149,6 @@
     <ClCompile Include="Cercle.cpp" />
     <ClCompile Include="DessineVisiteur.cpp" />
     <ClCompile Include="forme.cpp" />
-    <ClCompile Include="Point.cpp" />
     <ClCompile Include="Tim.cpp" />
     <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="Vecteur2D.cpp" />
@@ -158,7 +157,6 @@
     <ClInclude Include="Cercle.h" />
     <ClInclude Include="DessineVisiteur.h" />
     <ClInclude Include="forme.h" />
-    <ClInclude Include="point.h" />
     <ClInclude Include="Triangle.h" />
     <ClInclude Include="Vecteur2D.h" />
     <ClInclude Include="Visitable.h" />

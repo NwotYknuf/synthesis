@@ -1,42 +1,34 @@
 #pragma once
-#include "point.h"
 #include "Vecteur2D.h"
-#include "Cercle.h"
 #include <iostream>
 #include <string>
 #include "DessineVisiteur.h"
+#include "Cercle.h"
 #include "Triangle.h"
 
 int main(){
 	//goo.gl/QNUuZs
 
-	Point p1(1, 1);
-	Point p2(2,1);
+	cout << "// Vecteur \\\\"<<endl << endl;
 
-	cout << "p1 = " << p1 << endl;
-	cout << "p2 = " << p2 << endl;
+	Vecteur2D u1(2, 3), u2(-5, 3), v(u1);
 
-	Point p3 = p1 + p2;
-	cout << "p3 = p1 + p2 = " << p3 << endl;
-
-	Vecteur2D v1(p1, p3);
-	Vecteur2D v2(5,3,6,2);
-
-	cout << "v1 = " << v1 << endl;
-	cout << "v2 = " << v2 << endl;
+	cout << "u1 = " << u1 << endl;
+	cout << "u2 = " << u2 << endl << endl;
 	
-	Vecteur2D v3 = v1 + v2;
+	cout << "u1 * 2.5 = " << u1 * 2.5 << endl;
+	cout << "u2,u1 = " << u2 - u1<<endl<<endl;
 
-	cout << "v3 = " << v3 << endl;
+	cout << "// Cercle \\\\" << endl << endl;
+	Cercle c1("rouge", u1, 1.5);
+	DessineVisiteur pablo;
+	pablo.visite(&c1);
 
-	Cercle c("red", p1, 12);
-	Triangle t("blue", p1, p2, p3);
-	DessineVisiteur pablopicasso;
-
-	pablopicasso.visite(&c);
-	pablopicasso.visite(&t);
+	cout << "// Triangle \\\\" << endl << endl;
+	Triangle t1("bleue", u1, u2, v);
+	pablo.visite(&t1);
 
 	system("pause");
-	
+
 	return 0;
 }
