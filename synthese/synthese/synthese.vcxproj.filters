@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Formes">
+      <UniqueIdentifier>{7553fde9-e5b6-4119-918a-f77a2985bd46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Formes">
+      <UniqueIdentifier>{2b482383-957d-4a74-b160-f603b7009941}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Visiteurs">
+      <UniqueIdentifier>{bb440977-9a51-487c-8253-bcc3e85c0958}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Visiteurs">
+      <UniqueIdentifier>{dc1bcd10-9c54-4cff-8b90-ee59d1e7013c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Tim.cpp">
@@ -22,39 +34,45 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="forme.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="DessineVisiteur.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Formes</Filter>
     </ClCompile>
     <ClCompile Include="Cercle.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Formes</Filter>
     </ClCompile>
     <ClCompile Include="Triangle.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Formes</Filter>
+    </ClCompile>
+    <ClCompile Include="DessineVisiteur.cpp">
+      <Filter>Fichiers sources\Visiteurs</Filter>
+    </ClCompile>
+    <ClCompile Include="Quelconque.cpp">
+      <Filter>Fichiers sources\Formes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vecteur2D.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="forme.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Visiteur.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="DessineVisiteur.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Visitable.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="Cercle.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Formes</Filter>
     </ClInclude>
     <ClInclude Include="Triangle.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Formes</Filter>
+    </ClInclude>
+    <ClInclude Include="forme.h">
+      <Filter>Fichiers d%27en-tête\Formes</Filter>
+    </ClInclude>
+    <ClInclude Include="DessineVisiteur.h">
+      <Filter>Fichiers d%27en-tête\Visiteurs</Filter>
+    </ClInclude>
+    <ClInclude Include="Visitable.h">
+      <Filter>Fichiers d%27en-tête\Visiteurs</Filter>
+    </ClInclude>
+    <ClInclude Include="Visiteur.h">
+      <Filter>Fichiers d%27en-tête\Visiteurs</Filter>
+    </ClInclude>
+    <ClInclude Include="Quelconque.h">
+      <Filter>Fichiers d%27en-tête\Formes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

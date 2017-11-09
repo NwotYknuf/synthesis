@@ -22,7 +22,7 @@ public:
 	void setPoint(const Vecteur2D &p) { _centre = p; }
 	void setRayon(double d) { _rayon = d; }
 
-	bool operator==(const Cercle &c);
+	double aire() const;
 
 	void affiche(ostream&)const;
 	void accepte(const Visiteur &);

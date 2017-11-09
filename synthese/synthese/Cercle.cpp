@@ -2,6 +2,8 @@
 #include "Cercle.h"
 #include "Visiteur.h"
 
+const double PI = 3.14159265359;
+
 Cercle::Cercle() : Forme(), _centre() {
 	_rayon = 0;
 }
@@ -20,8 +22,8 @@ Cercle::Cercle(const Cercle &c) : Forme(c.getCouleur()), _centre(c._centre) {
 
 Cercle::~Cercle() { }
 
-bool Cercle::operator==(const Cercle &c) {
-	return _centre == c._centre && _rayon == c._rayon;
+double Cercle::aire()const{
+	return PI*_rayon*_rayon;
 }
 
 void Cercle::affiche(ostream&os)const {

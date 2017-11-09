@@ -1,5 +1,6 @@
 #pragma once
 #include "DessineVisiteur.h"
+#include "Quelconque.h"
 #include "Cercle.h"
 #include "Triangle.h"
 #include <iostream>
@@ -14,4 +15,8 @@ void DessineVisiteur::visite(const Cercle *c) const{
 
 void DessineVisiteur::visite(const Triangle *t) const {
 	cout << "je dessine le triangle : " << endl << *t;
+}
+
+void DessineVisiteur::visite(const Quelconque *q) const {
+	cout << "je dessine le Quelquonque : " << endl << *q;
 }

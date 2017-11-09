@@ -11,8 +11,18 @@ Triangle::Triangle(const Triangle &t)
 
 Triangle::~Triangle() { }
 
-bool Triangle::operator==(const Triangle & t){
-	return _p1 == t._p1 && _p2 == t._p2 && _p3 == t._p3;
+double Triangle::aire()const {
+	double xA = _p1.getX();
+	double yA = _p1.getY();
+	double xB = _p2.getX();
+	double yB = _p2.getY();
+	double xC = _p3.getX();
+	double yC = _p3.getY();
+
+	return 0.5 * (
+		((xB - xA)*(yC - yA))
+		- ((xC-xA)*(yB - yA))
+		);
 }
 
 void Triangle::accepte(const Visiteur &v){

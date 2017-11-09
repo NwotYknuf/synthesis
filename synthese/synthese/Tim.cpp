@@ -5,13 +5,13 @@
 #include "DessineVisiteur.h"
 #include "Cercle.h"
 #include "Triangle.h"
+#include	"Quelconque.h"
 
 int main(){
-	//goo.gl/QNUuZs
 
 	cout << "// Vecteur \\\\"<<endl << endl;
 
-	Vecteur2D u1(2, 3), u2(-5, 3), v(u1);
+	Vecteur2D u1(0.3, 0.7), u2(1, 0), v(0,1);
 
 	cout << "u1 = " << u1 << endl;
 	cout << "u2 = " << u2 << endl << endl;
@@ -23,10 +23,24 @@ int main(){
 	Cercle c1("rouge", u1, 1.5);
 	DessineVisiteur pablo;
 	pablo.visite(&c1);
+	cout << "aire de c1 : " << c1.aire() << endl << endl;
 
 	cout << "// Triangle \\\\" << endl << endl;
-	Triangle t1("bleue", u1, u2, v);
+	Triangle t1("bleu", u1, u2, v);
 	pablo.visite(&t1);
+	cout << "aire de t1 : " << t1.aire() << endl << endl;
+
+	cout << "// Quelconque \\\\" << endl << endl;
+
+	Quelconque q1("magenta");
+	Vecteur2D v1(12, 12);
+	Triangle t2("vert", u1, u2, v1);
+
+	q1.ajouteTriangle(t1);
+	q1.ajouteTriangle(t2);
+
+	pablo.visite(&q1);
+	cout << "aire de t1 : " << q1.aire() << endl << endl;
 
 	system("pause");
 

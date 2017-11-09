@@ -18,7 +18,8 @@ public:
 	const string& getCouleur()const { return _couleur; }
 	void setCouleur(const string &c) { _couleur = c; }
 
-	Forme operator=(const Forme&);
+	virtual double aire() const = 0;
+
 	friend ostream& operator<<(ostream&, const Forme&);
 
 	virtual void affiche(ostream&)const;

@@ -20,10 +20,6 @@ Forme::~Forme()
 
 }
 
-Forme Forme:: operator=(const Forme &f) {
-	return Forme(f);
-}
-
 ostream& operator<<(ostream &os, const Forme &f) {
 	f.affiche(os);
 	return os;
