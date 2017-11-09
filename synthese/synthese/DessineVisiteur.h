@@ -10,5 +10,6 @@ public :
 	void visite(const Cercle*)const;
 	void visite(const Triangle*)const;
 	void visite(const Quelconque*)const;
+	void visite(const Compose*)const;
 
 };

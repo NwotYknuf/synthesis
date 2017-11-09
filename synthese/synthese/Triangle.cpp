@@ -11,6 +11,10 @@ Triangle::Triangle(const Triangle &t)
 
 Triangle::~Triangle() { }
 
+Forme* Triangle::clone()const{
+	return new Triangle(*this);
+}
+
 double Triangle::aire()const {
 	double xA = _p1.getX();
 	double yA = _p1.getY();
@@ -30,6 +34,7 @@ void Triangle::accepte(const Visiteur &v){
 }
 
 void Triangle::affiche(ostream &os) const{
+	os << "Triangle" << endl;
 	Forme::affiche(os);
 	os << "	-p1 : " << _p1 << endl;
 	os << "	-p2 : " << _p2 << endl;

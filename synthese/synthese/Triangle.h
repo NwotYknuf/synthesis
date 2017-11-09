@@ -20,6 +20,7 @@ public:
 	void setP2(const Vecteur2D&p) { _p2 = p; }
 	void setP3(const Vecteur2D&p) { _p3 = p; }
 
+	Forme* clone()const;
 	double aire() const;
 
 	void accepte(const Visiteur&);

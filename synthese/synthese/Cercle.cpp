@@ -26,7 +26,12 @@ double Cercle::aire()const{
 	return PI*_rayon*_rayon;
 }
 
+Forme* Cercle::clone()const {
+	return new Cercle(*this);
+}
+
 void Cercle::affiche(ostream&os)const {
+	os << "Cercle" << endl;
 	Forme::affiche(os);
 	os << "	-centre : " << _centre << endl;
 	os << "	-rayon : " << _rayon << endl;

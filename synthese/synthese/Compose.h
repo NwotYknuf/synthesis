@@ -1,24 +1,24 @@
 #pragma once
 #include  "forme.h"
-#include "Triangle.h"
 #include "Visitable.h"
 #include <vector>
 #include <iostream>
 
 using namespace std;
 
-class Quelconque : public Forme, public Visitable {
+class Compose : public Forme, public Visitable {
+
 private:
-	vector<Triangle*> _triangles;
+	vector<Forme*> _formes;
 
 public:
-	Quelconque();
-	Quelconque(const string&);
-	Quelconque(const Quelconque&);
-	virtual ~Quelconque();
-	
+	Compose();
+	Compose(const string&);
+	Compose(const Compose&);
+	virtual ~Compose();
+
 	void setCouleur(const string&);
-	void ajouteTriangle(const Triangle&);
+	void ajouteForme(const Forme&);
 
 	Forme* clone()const;
 	double aire() const;

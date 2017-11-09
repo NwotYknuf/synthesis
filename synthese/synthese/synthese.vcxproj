@@ -147,6 +147,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Cercle.cpp" />
+    <ClCompile Include="Compose.cpp" />
     <ClCompile Include="DessineVisiteur.cpp" />
     <ClCompile Include="forme.cpp" />
     <ClCompile Include="Quelconque.cpp" />
@@ -156,6 +157,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cercle.h" />
+    <ClInclude Include="Compose.h" />
     <ClInclude Include="DessineVisiteur.h" />
     <ClInclude Include="forme.h" />
     <ClInclude Include="Quelconque.h" />

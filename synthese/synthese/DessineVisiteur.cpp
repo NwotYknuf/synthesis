@@ -3,6 +3,7 @@
 #include "Quelconque.h"
 #include "Cercle.h"
 #include "Triangle.h"
+#include "Compose.h"
 #include <iostream>
 
 using namespace std;
@@ -19,4 +20,8 @@ void DessineVisiteur::visite(const Triangle *t) const {
 
 void DessineVisiteur::visite(const Quelconque *q) const {
 	cout << "je dessine le Quelquonque : " << endl << *q;
+}
+
+void DessineVisiteur::visite(const Compose *c) const {
+	cout << "je dessine le compose : " << endl << *c;
 }

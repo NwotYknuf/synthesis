@@ -48,6 +48,9 @@
     <ClCompile Include="Quelconque.cpp">
       <Filter>Fichiers sources\Formes</Filter>
     </ClCompile>
+    <ClCompile Include="Compose.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vecteur2D.h">
@@ -73,6 +76,9 @@
     </ClInclude>
     <ClInclude Include="Quelconque.h">
       <Filter>Fichiers d%27en-tête\Formes</Filter>
+    </ClInclude>
+    <ClInclude Include="Compose.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

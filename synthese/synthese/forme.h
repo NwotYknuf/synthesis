@@ -16,11 +16,11 @@ public:
 	virtual ~Forme();
 
 	const string& getCouleur()const { return _couleur; }
-	void setCouleur(const string &c) { _couleur = c; }
+	virtual void setCouleur(const string &c) { _couleur = c; }
 
 	virtual double aire() const = 0;
+	virtual Forme* clone()const = 0;
+	virtual void affiche(ostream&)const;
 
 	friend ostream& operator<<(ostream&, const Forme&);
-
-	virtual void affiche(ostream&)const;
 };

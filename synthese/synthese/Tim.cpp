@@ -6,6 +6,7 @@
 #include "Cercle.h"
 #include "Triangle.h"
 #include	"Quelconque.h"
+#include "Compose.h"
 
 int main(){
 
@@ -43,6 +44,15 @@ int main(){
 	cout << "aire de t1 : " << q1.aire() << endl << endl;
 	q1.setCouleur("moutarde");
 	cout << "apres modification de la couleur : " << endl << q1 << endl << endl;
+
+
+	cout << "// Compose \\\\" << endl << endl;
+	Compose cmp1("rose");
+	cmp1.ajouteForme(c1);
+	cmp1.ajouteForme(q1);
+	pablo.visite(&cmp1);
+	cout << "aire de t1 : " << cmp1.aire() << endl << endl;
+
 	system("pause");
 
 	return 0;
