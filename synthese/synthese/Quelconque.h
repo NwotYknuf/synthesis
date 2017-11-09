@@ -17,6 +17,7 @@ public:
 	Quelconque(const Quelconque&);
 	virtual ~Quelconque();
 	
+	void setCouleur(string);
 	void ajouteTriangle(const Triangle&);
 
 	double aire() const;

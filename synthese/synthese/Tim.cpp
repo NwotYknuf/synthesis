@@ -41,7 +41,8 @@ int main(){
 
 	pablo.visite(&q1);
 	cout << "aire de t1 : " << q1.aire() << endl << endl;
-
+	q1.setCouleur("moutarde");
+	cout << "apres modification de la couleur : " << endl << q1 << endl << endl;
 	system("pause");
 
 	return 0;
