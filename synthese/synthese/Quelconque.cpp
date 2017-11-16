@@ -45,8 +45,8 @@ double Quelconque::aire() const {
 	return total;
 }
 
-void Quelconque::accepte(const Visiteur&v) {
-	v.visite(this);
+void Quelconque::accepte(Visiteur*v) {
+	v->visite(this);
 }
 
 void Quelconque::affiche(ostream &o) const {
@@ -56,4 +56,28 @@ void Quelconque::affiche(ostream &o) const {
 	for (Triangle* t : _triangles) {
 		t->affiche(o);
 	}
+}
+
+Forme* Quelconque::translation(const Vecteur2D & deplacement)const {
+	Quelconque* q = new Quelconque(*this);
+	for (Triangle* t : q->_triangles) {
+		t = (Triangle*)(t->translation(deplacement));
+	}
+	return q;
+}
+
+Forme* Quelconque::rotation(const Vecteur2D & centre, double angle)const {
+	Quelconque* q = new Quelconque(*this);
+	for (Triangle* t : q->_triangles) {
+		t = (Triangle*)(t->rotation(centre, angle));
+	}
+	return q;
+}
+
+Forme* Quelconque::echelle(const Vecteur2D & centre, double ration)const {
+	Quelconque* q = new Quelconque(*this);
+	for (Triangle* t : q->_triangles) {
+		t = (Triangle*)(t->echelle(centre, ration));
+	}
+	return q;
 }

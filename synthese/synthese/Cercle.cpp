@@ -2,8 +2,7 @@
 #include "Cercle.h"
 #include "Visiteur.h"
 
-const double PI = 3.14159265359;
-
+const double PI = 3.141592653589793238462643383279;
 Cercle::Cercle() : Forme(), _centre() {
 	_rayon = 0;
 }
@@ -37,6 +36,33 @@ void Cercle::affiche(ostream&os)const {
 	os << "	-rayon : " << _rayon << endl;
 }
 
-void Cercle::accepte(const Visiteur &v) {
-	v.visite(this);
+void Cercle::accepte(Visiteur *v) {
+	v->visite(this);
+}
+
+Forme* Cercle::translation(const Vecteur2D & deplacement)const {
+	Cercle* c = new Cercle(*this);
+	c->_centre = _centre + deplacement;
+	return c;
+}
+
+Forme* Cercle::rotation(const Vecteur2D & centre , double angle)const {
+	Cercle* c = new Cercle(*this);
+	double a = centre.getX();
+	double b = centre.getY();
+	double x = c->_centre.getX();
+	double y = c->_centre.getY();
+	
+	c->_centre.setX(a + x * cos(angle) - y * sin(angle));
+	c->_centre.setY(b + x * sin(angle) + y * cos(angle));
+
+	return c;
+}
+
+Forme* Cercle::echelle(const Vecteur2D & centre, double facteur)const {
+	Vecteur2D temp = _centre - centre;
+	temp = temp * facteur;
+	temp = temp + centre;
+
+	return new Cercle(this->getCouleur(),temp, _rayon * fabs(facteur));
 }

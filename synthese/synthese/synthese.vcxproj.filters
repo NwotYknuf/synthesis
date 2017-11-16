@@ -49,7 +49,7 @@
       <Filter>Fichiers sources\Formes</Filter>
     </ClCompile>
     <ClCompile Include="Compose.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Formes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -78,7 +78,7 @@
       <Filter>Fichiers d%27en-tête\Formes</Filter>
     </ClInclude>
     <ClInclude Include="Compose.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Formes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

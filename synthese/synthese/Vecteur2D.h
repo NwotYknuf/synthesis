@@ -19,6 +19,8 @@ public:
 	void setX(double x) { _x = x; }
 	void setY(double y) { _y = y; }
 
+	double distance(const Vecteur2D&)const;
+
 	Vecteur2D operator=(const Vecteur2D&);
 	bool operator==(const Vecteur2D&);
 	friend ostream& operator<<(ostream&, const Vecteur2D&);

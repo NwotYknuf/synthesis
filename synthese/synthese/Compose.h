@@ -1,6 +1,7 @@
 #pragma once
 #include  "forme.h"
 #include "Visitable.h"
+#include "Vecteur2D.h"
 #include <vector>
 #include <iostream>
 
@@ -23,6 +24,10 @@ public:
 	Forme* clone()const;
 	double aire() const;
 
-	void accepte(const Visiteur&);
+	Forme* translation(const Vecteur2D &)const;
+	Forme* rotation(const Vecteur2D &, double)const;
+	Forme* echelle(const Vecteur2D &, double)const;
+
+	void accepte(Visiteur*);
 	void affiche(ostream&)const;
 };

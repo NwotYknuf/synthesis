@@ -29,8 +29,8 @@ double Triangle::aire()const {
 		);
 }
 
-void Triangle::accepte(const Visiteur &v){
-	v.visite(this);
+void Triangle::accepte(Visiteur *v){
+	v->visite(this);
 }
 
 void Triangle::affiche(ostream &os) const{
@@ -39,4 +39,55 @@ void Triangle::affiche(ostream &os) const{
 	os << "	-p1 : " << _p1 << endl;
 	os << "	-p2 : " << _p2 << endl;
 	os << "	-p3 : " << _p3 << endl;
+}
+
+Forme* Triangle::translation(const Vecteur2D &deplacement)const {
+	Triangle* t = new Triangle(*this);
+	t->_p1 = t->_p1 + deplacement;
+	t->_p2 = t->_p2 + deplacement;
+	t->_p3 = t->_p3 + deplacement;
+	return t;
+}
+
+Forme* Triangle::rotation(const Vecteur2D &centre, double angle)const {
+	Triangle* t = new Triangle(*this);
+	double a = centre.getX();
+	double b = centre.getY();
+	double x = t->_p1.getX();
+	double y = t->_p1.getY();
+	
+	t->_p1.setX(a + x * cos(angle) - y * sin(angle));
+	t->_p1.setY(b + x * sin(angle) + y * cos(angle));
+
+	x = t->_p2.getX();
+	y = t->_p2.getY();
+
+	t->_p2.setX(a + x * cos(angle) - y * sin(angle));
+	t->_p2.setY(b + x * sin(angle) + y * cos(angle));
+
+	x = t->_p3.getX();
+	y = t->_p3.getY();
+
+	t->_p3.setX(a + x * cos(angle) - y * sin(angle));
+	t->_p3.setY(b + x * sin(angle) + y * cos(angle));
+	
+	return t;
+}
+
+Forme* Triangle::echelle(const Vecteur2D &centre, double facteur)const {
+	Triangle* t = new Triangle(*this);
+	
+	t->_p1 = t->_p1 - centre;
+	t->_p1 = t->_p1 * facteur;
+	t->_p1 = t->_p1 + centre;
+
+	t->_p2 = t->_p2 - centre;
+	t->_p2 = t->_p2 * facteur;
+	t->_p2 = t->_p2 + centre;
+
+	t->_p3 = t->_p3 - centre;
+	t->_p3 = t->_p3 * facteur;
+	t->_p3 = t->_p3 + centre;
+
+	return t;
 }

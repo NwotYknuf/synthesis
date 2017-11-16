@@ -18,6 +18,10 @@ Vecteur2D::Vecteur2D(double x, double y){
 
 Vecteur2D::~Vecteur2D() { }
 
+double Vecteur2D::distance(const Vecteur2D&v)const {
+	return sqrt(pow(_x - v._x, 2.0) + pow(_y - v._y, 2.0));
+}
+
 Vecteur2D Vecteur2D::operator=(const Vecteur2D &v){
 	_x = v._x;
 	_y = v._y;

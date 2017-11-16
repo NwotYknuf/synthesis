@@ -46,8 +46,8 @@ double Compose::aire() const{
 	return total;
 }
 
-void Compose::accepte(const Visiteur&v) {
-	v.visite(this);
+void Compose::accepte(Visiteur*v) {
+	v->visite(this);
 }
 
 void Compose::affiche(ostream &o) const {
@@ -58,4 +58,28 @@ void Compose::affiche(ostream &o) const {
 	for (Forme* f : _formes) {
 		f->affiche(o);
 	}
+}
+
+Forme* Compose::translation(const Vecteur2D & deplacement)const {
+	Compose* c = new Compose(*this);
+	for (Forme* f : c->_formes) {
+		f = f->translation(deplacement);
+	}
+	return c;
+}
+
+Forme* Compose::rotation(const Vecteur2D & centre, double angle)const {
+	Compose* c = new Compose(*this);
+	for (Forme* f : c->_formes) {
+		f = f->rotation(centre, angle);
+	}
+	return c;
+}
+
+Forme* Compose::echelle(const Vecteur2D & centre, double ratio)const {
+	Compose* c = new Compose(*this);
+	for (Forme* f : c->_formes) {
+		f = f->echelle(centre, ratio);
+	}
+	return c;
 }
