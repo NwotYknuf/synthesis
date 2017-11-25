@@ -22,10 +22,12 @@ public:
 
 	Forme* clone()const;
 	double aire() const;
+	void accepte(Visiteur*);
+	const string& encoder() const;
+	void affiche(ostream&)const;
+
 	Forme* translation(const Vecteur2D &)const;
 	Forme* rotation(const Vecteur2D &, double)const;
 	Forme* echelle(const Vecteur2D &, double)const;
 
-	void accepte(Visiteur*);
-	void affiche(ostream&)const;
 };

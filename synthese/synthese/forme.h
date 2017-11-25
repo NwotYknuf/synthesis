@@ -21,6 +21,8 @@ public:
 	virtual double aire() const = 0;
 	virtual Forme* clone()const = 0;
 	virtual void affiche(ostream&)const;
+	virtual const string& encoder()const = 0;
+
 	virtual Forme* translation(const Vecteur2D&)const = 0;
 	virtual Forme* rotation(const Vecteur2D&, double)const = 0;
 	virtual Forme* echelle(const Vecteur2D&, double)const = 0;

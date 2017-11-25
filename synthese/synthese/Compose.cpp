@@ -1,6 +1,7 @@
 #pragma once
 #include "Compose.h"
 #include "Visiteur.h"
+#include<sstream>
 
 Compose::Compose() : Forme() { }
 
@@ -48,6 +49,19 @@ double Compose::aire() const{
 
 void Compose::accepte(Visiteur*v) {
 	v->visite(this);
+}
+
+const string& Compose::encoder()const {
+	ostringstream oss;
+
+	oss << "Compose" << ",";
+
+	for (Forme* f : _formes) {
+		oss << f->encoder();
+	}
+	oss << "end" << "\r\n";
+
+	return oss.str();
 }
 
 void Compose::affiche(ostream &o) const {

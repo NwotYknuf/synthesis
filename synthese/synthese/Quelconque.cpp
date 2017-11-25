@@ -1,6 +1,7 @@
 #pragma once
 #include"Quelconque.h"
 #include "Visiteur.h"
+#include <sstream>
 
 Quelconque::Quelconque() : Forme() { }
 
@@ -47,6 +48,20 @@ double Quelconque::aire() const {
 
 void Quelconque::accepte(Visiteur*v) {
 	v->visite(this);
+}
+
+const string& Quelconque::encoder()const {
+
+	ostringstream oss;
+
+	oss << "Quelquonque" << ",";
+
+	for (Triangle* t : _triangles) {
+		oss << t->encoder();
+	}
+	oss << "end" << "\r\n";
+
+	return oss.str();
 }
 
 void Quelconque::affiche(ostream &o) const {

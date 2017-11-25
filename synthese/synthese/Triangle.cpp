@@ -1,5 +1,6 @@
 #include "Triangle.h"
 #include "Visiteur.h"
+#include <sstream>
 
 Triangle::Triangle() : Forme(),_p1(), _p2(), _p3() { }
 
@@ -39,6 +40,14 @@ void Triangle::affiche(ostream &os) const{
 	os << "	-p1 : " << _p1 << endl;
 	os << "	-p2 : " << _p2 << endl;
 	os << "	-p3 : " << _p3 << endl;
+}
+
+const string& Triangle::encoder()const {
+	ostringstream oss;
+	oss << "Cercle" << "," << _p1.getX() << "," << _p1.getY() << ","
+		<< _p2.getX() << "," << _p2.getY() << ","
+		<< _p3.getX() << "," << _p3.getY() << "," << "\r\n";
+	return oss.str();
 }
 
 Forme* Triangle::translation(const Vecteur2D &deplacement)const {

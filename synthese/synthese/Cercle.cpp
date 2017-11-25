@@ -1,8 +1,12 @@
 #pragma once
 #include "Cercle.h"
 #include "Visiteur.h"
+#include <sstream>
+
+using namespace std;
 
 const double PI = 3.141592653589793238462643383279;
+
 Cercle::Cercle() : Forme(), _centre() {
 	_rayon = 0;
 }
@@ -34,6 +38,12 @@ void Cercle::affiche(ostream&os)const {
 	Forme::affiche(os);
 	os << "	-centre : " << _centre << endl;
 	os << "	-rayon : " << _rayon << endl;
+}
+
+const string& Cercle::encoder() const {
+	ostringstream oss;
+	oss << "Cercle" << "," << _centre.getX() << "," << _centre.getY() << "," << _rayon << "\r\n";
+	return oss.str();
 }
 
 void Cercle::accepte(Visiteur *v) {

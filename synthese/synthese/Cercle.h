@@ -24,11 +24,13 @@ public:
 
 	Forme* clone()const;
 	double aire() const;
+	void affiche(ostream&)const;
+	const string& encoder()const;
+	void accepte(Visiteur *);
 
 	Forme* translation(const Vecteur2D &)const;
 	Forme* rotation(const Vecteur2D &, double)const;
 	Forme* echelle(const Vecteur2D &, double)const;
 
-	void affiche(ostream&)const;
-	void accepte(Visiteur *);
+	
 };
