@@ -42,9 +42,10 @@ void Triangle::affiche(ostream &os) const{
 	os << "	-p3 : " << _p3 << endl;
 }
 
-const string& Triangle::encoder()const {
+const string Triangle::encoder()const {
 	ostringstream oss;
-	oss << "Cercle" << "," << _p1.getX() << "," << _p1.getY() << ","
+	oss << "Triangle" << "," << getCouleur() << ","
+		<< _p1.getX() << "," << _p1.getY() << ","
 		<< _p2.getX() << "," << _p2.getY() << ","
 		<< _p3.getX() << "," << _p3.getY() << "," << "\r\n";
 	return oss.str();

@@ -2,8 +2,9 @@
 
 class Cercle;
 class Triangle;
-class Quelconque;
+class Polygone;
 class Compose;
+class Seguement;
 
 class Visiteur {
 private:
@@ -11,7 +12,8 @@ private:
 public:
 	virtual void visite(const Cercle*)const = 0;
 	virtual void visite(const Triangle*)const = 0;
-	virtual void visite(const Quelconque*)const = 0;
-	virtual void visite(const Compose*)const =0;
+	virtual void visite(const Polygone*)const = 0;
+	virtual void visite(const Compose*)const = 0;
+	virtual void visite(const Seguement*)const =0;
 
 };

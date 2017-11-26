@@ -1,25 +1,25 @@
 #pragma once
-#include"Quelconque.h"
+#include"Polygone.h"
 #include "Visiteur.h"
 #include <sstream>
 
-Quelconque::Quelconque() : Forme() { }
+Polygone::Polygone() : Forme() { }
 
-Quelconque::Quelconque(const string& couleur) : Forme(couleur) { }
+Polygone::Polygone(const string& couleur) : Forme(couleur) { }
 
-Quelconque::Quelconque(const Quelconque& q) : Forme(q.getCouleur()) {
+Polygone::Polygone(const Polygone& q) : Forme(q.getCouleur()) {
 	for (Triangle* t : q._triangles) {
 		_triangles.push_back(new Triangle(*t));
 	}
 }
 
-Quelconque::~Quelconque() { 
+Polygone::~Polygone() { 
 	for (Triangle* t : _triangles) {
 		delete(t);
 	}
 }
 
-void Quelconque::setCouleur(const string& couleur) {
+void Polygone::setCouleur(const string& couleur) {
 	Forme::setCouleur(couleur);
 
 	for (Triangle* t : _triangles) {
@@ -28,17 +28,17 @@ void Quelconque::setCouleur(const string& couleur) {
 
 }
 
-void Quelconque::ajouteTriangle(const Triangle &t) {
+void Polygone::ajouteTriangle(const Triangle &t) {
 	Triangle* temp = new Triangle(t);
 	temp->setCouleur(this->getCouleur());
 	_triangles.push_back(temp); 
 }
 
-Forme* Quelconque::clone()const {
-	return new Quelconque(*this);
+Forme* Polygone::clone()const {
+	return new Polygone(*this);
 }
 
-double Quelconque::aire() const {
+double Polygone::aire() const {
 	double total = 0;
 	for (Triangle* t : _triangles) {
 		total += t->aire();
@@ -46,15 +46,15 @@ double Quelconque::aire() const {
 	return total;
 }
 
-void Quelconque::accepte(Visiteur*v) {
+void Polygone::accepte(Visiteur*v) {
 	v->visite(this);
 }
 
-const string& Quelconque::encoder()const {
+const string Polygone::encoder()const {
 
 	ostringstream oss;
 
-	oss << "Quelquonque" << ",";
+	oss << "Polygone" << "\r\n";
 
 	for (Triangle* t : _triangles) {
 		oss << t->encoder();
@@ -64,7 +64,7 @@ const string& Quelconque::encoder()const {
 	return oss.str();
 }
 
-void Quelconque::affiche(ostream &o) const {
+void Polygone::affiche(ostream &o) const {
 	o << "Triangle" << endl;
 	Forme::affiche(o);
 	o << "Liste des triangles : " << endl;
@@ -73,24 +73,24 @@ void Quelconque::affiche(ostream &o) const {
 	}
 }
 
-Forme* Quelconque::translation(const Vecteur2D & deplacement)const {
-	Quelconque* q = new Quelconque(*this);
+Forme* Polygone::translation(const Vecteur2D & deplacement)const {
+	Polygone* q = new Polygone(*this);
 	for (Triangle* t : q->_triangles) {
 		t = (Triangle*)(t->translation(deplacement));
 	}
 	return q;
 }
 
-Forme* Quelconque::rotation(const Vecteur2D & centre, double angle)const {
-	Quelconque* q = new Quelconque(*this);
+Forme* Polygone::rotation(const Vecteur2D & centre, double angle)const {
+	Polygone* q = new Polygone(*this);
 	for (Triangle* t : q->_triangles) {
 		t = (Triangle*)(t->rotation(centre, angle));
 	}
 	return q;
 }
 
-Forme* Quelconque::echelle(const Vecteur2D & centre, double ration)const {
-	Quelconque* q = new Quelconque(*this);
+Forme* Polygone::echelle(const Vecteur2D & centre, double ration)const {
+	Polygone* q = new Polygone(*this);
 	for (Triangle* t : q->_triangles) {
 		t = (Triangle*)(t->echelle(centre, ration));
 	}

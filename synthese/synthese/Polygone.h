@@ -7,15 +7,15 @@
 
 using namespace std;
 
-class Quelconque : public Forme, public Visitable {
+class Polygone : public Forme, public Visitable {
 private:
 	vector<Triangle*> _triangles;
 
 public:
-	Quelconque();
-	Quelconque(const string&);
-	Quelconque(const Quelconque&);
-	virtual ~Quelconque();
+	Polygone();
+	Polygone(const string&);
+	Polygone(const Polygone&);
+	virtual ~Polygone();
 	
 	void setCouleur(const string&);
 	void ajouteTriangle(const Triangle&);
@@ -23,7 +23,7 @@ public:
 	Forme* clone()const;
 	double aire() const;
 	void accepte(Visiteur*);
-	const string& encoder() const;
+	const string encoder() const;
 	void affiche(ostream&)const;
 
 	Forme* translation(const Vecteur2D &)const;

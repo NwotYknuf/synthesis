@@ -151,7 +151,8 @@
     <ClCompile Include="DessineVisiteur.cpp" />
     <ClCompile Include="forme.cpp" />
     <ClCompile Include="MonWinsock.cpp" />
-    <ClCompile Include="Quelconque.cpp" />
+    <ClCompile Include="Polygone.cpp" />
+    <ClCompile Include="Seguement.cpp" />
     <ClCompile Include="Tim.cpp" />
     <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="Vecteur2D.cpp" />
@@ -162,7 +163,8 @@
     <ClInclude Include="DessineVisiteur.h" />
     <ClInclude Include="forme.h" />
     <ClInclude Include="MonWinsock.h" />
-    <ClInclude Include="Quelconque.h" />
+    <ClInclude Include="Polygone.h" />
+    <ClInclude Include="Seguement.h" />
     <ClInclude Include="Triangle.h" />
     <ClInclude Include="Vecteur2D.h" />
     <ClInclude Include="Visitable.h" />

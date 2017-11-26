@@ -3,11 +3,12 @@
 #define _WINSOCK_DEPRECATED_NO_WARNINGS
 
 #include "DessineVisiteur.h"
-#include "Quelconque.h"
+#include "Polygone.h"
 #include "Cercle.h"
 #include "Triangle.h"
 #include "Compose.h"
 #include "MonWinsock.h"
+#include "Seguement.h"
 #include <iostream>
 #include<sstream>
 
@@ -55,10 +56,14 @@ void DessineVisiteur::visite(const Triangle *t) const {
 	cout << "je dessine le triangle : " << endl << *t;
 }
 
-void DessineVisiteur::visite(const Quelconque *q) const {
+void DessineVisiteur::visite(const Polygone *q) const {
 	cout << "je dessine le Quelquonque : " << endl << *q;
 }
 
 void DessineVisiteur::visite(const Compose *c) const {
 	cout << "je dessine le compose : " << endl << *c;
+}
+
+void DessineVisiteur::visite(const Seguement *s) const {
+	cout << "je dessine le seguement : " << endl << *s;
 }

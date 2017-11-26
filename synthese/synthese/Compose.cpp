@@ -51,10 +51,10 @@ void Compose::accepte(Visiteur*v) {
 	v->visite(this);
 }
 
-const string& Compose::encoder()const {
+const string Compose::encoder()const {
 	ostringstream oss;
 
-	oss << "Compose" << ",";
+	oss << "Polygone" << "\r\n";
 
 	for (Forme* f : _formes) {
 		oss << f->encoder();

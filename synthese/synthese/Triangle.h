@@ -23,7 +23,7 @@ public:
 	Forme* clone()const;
 	double aire() const;
 	void accepte(Visiteur*);
-	const string& encoder() const;
+	const string encoder() const;
 	void affiche(ostream&)const;
 
 	Forme* translation(const Vecteur2D &)const;

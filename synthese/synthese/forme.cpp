@@ -15,10 +15,7 @@ Forme::Forme(const Forme& f) {
 	_couleur = f._couleur;
 }
 
-Forme::~Forme()
-{
-
-}
+Forme::~Forme(){ }
 
 ostream& operator<<(ostream &os, const Forme &f) {
 	f.affiche(os);

@@ -16,7 +16,8 @@ public :
 	~DessineVisiteur();
 	void visite(const Cercle*)const;
 	void visite(const Triangle*)const;
-	void visite(const Quelconque*)const;
+	void visite(const Polygone*)const;
 	void visite(const Compose*)const;
+	void visite(const Seguement*)const;
 
 };
