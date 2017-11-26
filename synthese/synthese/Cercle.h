@@ -1,6 +1,6 @@
 #pragma once
 #include "Vecteur2D.h"
-#include "forme.h"
+#include "Forme.h"
 #include "Visitable.h"
 
 class Visiteur;

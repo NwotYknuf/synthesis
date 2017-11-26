@@ -1,5 +1,5 @@
 #pragma once
-#include "forme.h"
+#include "Forme.h"
 #include <iostream>
 #include<string>
 

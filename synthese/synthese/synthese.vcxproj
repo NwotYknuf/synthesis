@@ -149,7 +149,7 @@
     <ClCompile Include="Cercle.cpp" />
     <ClCompile Include="Compose.cpp" />
     <ClCompile Include="DessineVisiteur.cpp" />
-    <ClCompile Include="forme.cpp" />
+    <ClCompile Include="Forme.cpp" />
     <ClCompile Include="MonWinsock.cpp" />
     <ClCompile Include="Polygone.cpp" />
     <ClCompile Include="Seguement.cpp" />
@@ -161,7 +161,7 @@
     <ClInclude Include="Cercle.h" />
     <ClInclude Include="Compose.h" />
     <ClInclude Include="DessineVisiteur.h" />
-    <ClInclude Include="forme.h" />
+    <ClInclude Include="Forme.h" />
     <ClInclude Include="MonWinsock.h" />
     <ClInclude Include="Polygone.h" />
     <ClInclude Include="Seguement.h" />

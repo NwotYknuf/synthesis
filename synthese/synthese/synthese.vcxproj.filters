@@ -33,9 +33,6 @@
     <ClCompile Include="Vecteur2D.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="forme.cpp">
-      <Filter>Fichiers sources\Formes</Filter>
-    </ClCompile>
     <ClCompile Include="Cercle.cpp">
       <Filter>Fichiers sources\Formes</Filter>
     </ClCompile>
@@ -55,7 +52,10 @@
       <Filter>Fichiers sources\Formes</Filter>
     </ClCompile>
     <ClCompile Include="Seguement.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Formes</Filter>
+    </ClCompile>
+    <ClCompile Include="Forme.cpp">
+      <Filter>Fichiers sources\Formes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -66,9 +66,6 @@
       <Filter>Fichiers d%27en-tête\Formes</Filter>
     </ClInclude>
     <ClInclude Include="Triangle.h">
-      <Filter>Fichiers d%27en-tête\Formes</Filter>
-    </ClInclude>
-    <ClInclude Include="forme.h">
       <Filter>Fichiers d%27en-tête\Formes</Filter>
     </ClInclude>
     <ClInclude Include="DessineVisiteur.h">
@@ -90,7 +87,10 @@
       <Filter>Fichiers d%27en-tête\Formes</Filter>
     </ClInclude>
     <ClInclude Include="Seguement.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Formes</Filter>
+    </ClInclude>
+    <ClInclude Include="Forme.h">
+      <Filter>Fichiers d%27en-tête\Formes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
