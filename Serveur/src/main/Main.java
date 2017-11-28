@@ -28,12 +28,12 @@ public class Main {
 				SessionDessin sessionDessin = new SessionDessin(socket);
 				sessionDessin.start();
 			}
-			
+
 			serveurDessin.close();
 
 		} catch (IOException e) {
 			System.err.println("Le serveur n'a pu être connecté sur le port d'écoute ou "
-					+"la connexion sur ce port a été rompue. \n Détails : " + e);
+					+ "la connexion sur ce port a été rompue. \n Détails : " + e);
 		}
 	}
 }

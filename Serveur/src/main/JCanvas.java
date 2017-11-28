@@ -1,23 +1,17 @@
 package main;
 
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
 import javax.swing.JPanel;
-
 import drawable.Drawable;
-
 import java.awt.Graphics;
-
+import java.util.ArrayList;
 
 public class JCanvas extends JPanel {
 
-	private List drawables = new LinkedList();
+	private ArrayList<Drawable> drawables = new ArrayList<Drawable>();
 	
 	public void paint(Graphics g) {
 		super.paint(g);
-		for (Iterator iter = drawables.iterator(); iter.hasNext();) {
-			Drawable d = (Drawable) iter.next();
+		for(Drawable d : drawables){
 			d.draw(g);	
 		}
 	}

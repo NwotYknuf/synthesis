@@ -7,7 +7,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.SocketException;
 import expert.*;
-import drawable.*;
 
 public class SessionDessin extends Thread{
 	Socket socket;
@@ -40,14 +39,17 @@ public class SessionDessin extends Thread{
 			jc.setBackground(Color.BLACK);
 			jc.setPreferredSize(new Dimension(largeur, hauteur));
 			GUIHelper.showOnFrame(jc,titre);
-						
-			//ExpertTrianglePolygone TrianglePoly = new ExpertTrianglePolygone(null, jc);
-			ExpertCercle Cercle = new ExpertCercle(null, jc);
+			
+			ExpertSegment Segment = new ExpertSegment(null, jc);
+			ExpertCercle Cercle = new ExpertCercle(Segment, jc);
+			ExpertTriangle Triangle = new ExpertTriangle(Cercle, jc);
+			ExpertPolygone Polygone = new ExpertPolygone(Triangle);
+			ExpertCompose Compose = new ExpertCompose(Polygone);
 
 			while (true) {
 				requete = this.fluxEntrant.readLine();
 				System.out.println("requête reçue : " + requete);
-				Cercle.decide(requete);
+				Compose.decide(requete);
 			}
 		}
 

@@ -1,7 +1,6 @@
 package drawable;
 
 import java.awt.Color;
-import java.awt.Graphics;
 
 public abstract class DrawableForme implements Drawable {
 	

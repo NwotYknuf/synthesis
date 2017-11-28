@@ -54,7 +54,7 @@ const string Polygone::encoder()const {
 
 	ostringstream oss;
 
-	oss << "Polygone,";
+	oss << "polygone,";
 
 	for (Triangle* t : _triangles) {
 		oss << t->encoder() << ";";

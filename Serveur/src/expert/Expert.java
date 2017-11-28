@@ -1,7 +1,5 @@
 package expert;
 
-import java.awt.Color;
-
 public abstract class Expert {
 
 	private Expert suivant = null;

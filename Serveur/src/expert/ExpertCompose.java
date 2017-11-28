@@ -1,15 +1,15 @@
 package expert;
 
-public class ExpertPolygone extends Expert {
+public class ExpertCompose extends Expert {
 
-	public ExpertPolygone(Expert e) {
+	public ExpertCompose(Expert e) {
 		super(e);
 	}
 
 	@Override
 	public void decide(String requete) throws Exception {
 		String arguments[] = requete.split(",");
-		if (arguments[0].equals("polygone"))
+		if (arguments[0].equals("compose"))
 			gere(requete);
 		else {
 			if (getSuivant() != null)
@@ -21,13 +21,13 @@ public class ExpertPolygone extends Expert {
 	@Override
 	public void gere(String requete) throws Exception {
 		// On récupère les arguments
-		String suiteReq = requete.substring(9, requete.length()-1);
-		
+		String suiteReq = requete.substring(8, requete.length()-1);
+
 		String ssReq[] = suiteReq.split(";");
 		
 		for(String req : ssReq){
-			System.out.println(req);
-			getSuivant().decide(req);
+			this.decide(req);
 		}
 	}
+
 }
