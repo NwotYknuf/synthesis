@@ -22,3 +22,4 @@
 *.filters
 *.vcxproj
 synthese/synthese/synthese.vcxproj.filters
+*.class

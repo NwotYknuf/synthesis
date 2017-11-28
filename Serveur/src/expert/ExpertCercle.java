@@ -2,6 +2,7 @@ package expert;
 import java.awt.Color;
 import java.awt.color.*;
 
+import drawable.DrawableCercle;
 import main.JCanvas;
 
 
@@ -40,7 +41,29 @@ public class ExpertCercle extends Expert {
 	    int rayon = Integer.parseInt(arguments[4].trim());
 	    
 	    //On dessine
-	    
+	    DrawableCercle cercle = new DrawableCercle(Ox, Oy, rayon, couleurAWT(couleur));
+	    cadre.addDrawable(cercle);	    
+	}
+	
+	public Color couleurAWT(String couleur) throws Exception {
+		switch (couleur) {
+		case "noir" :
+			return Color.BLACK;
+		case "blanc" :
+			return Color.WHITE;
+		case "vert" :
+			return Color.GREEN;
+		case "rouge" :
+			return Color.RED;
+		case "bleu" :
+			return Color.BLUE;
+		case "jaune" :
+			return Color.YELLOW;
+		case "cyan" :
+			return Color.CYAN;
+		 default :
+			throw new Exception("Couleur non conforme");
+		}
 	}
 
 }

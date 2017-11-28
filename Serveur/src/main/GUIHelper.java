@@ -12,7 +12,7 @@ public class GUIHelper {
 		JFrame frame = new JFrame(frameName);
 		WindowAdapter wa = new WindowAdapter() {
 			public void windowClosing(WindowEvent e) {
-				System.exit(0);
+				frame.hide();
 			}
 		};
 		frame.addWindowListener(wa);
