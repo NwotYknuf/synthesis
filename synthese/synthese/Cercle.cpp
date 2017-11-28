@@ -42,7 +42,7 @@ void Cercle::affiche(ostream&os)const {
 
 const string Cercle::encoder() const {
 	ostringstream oss;
-	oss << "Cercle" << ","<< getCouleur()<< "," << _centre.getX() << "," << _centre.getY() << "," << _rayon << "\r\n";
+	oss << "cercle" << ","<< getCouleur()<< "," << _centre.getX() << "," << _centre.getY() << "," << _rayon << "\r\n";
 	return oss.str();
 }
 

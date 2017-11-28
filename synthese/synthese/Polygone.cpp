@@ -59,7 +59,6 @@ const string Polygone::encoder()const {
 	for (Triangle* t : _triangles) {
 		oss << t->encoder();
 	}
-	oss << "end" << "\r\n";
 
 	return oss.str();
 }

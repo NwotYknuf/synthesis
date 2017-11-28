@@ -9,12 +9,13 @@
 #include "Compose.h"
 #include "MonWinsock.h"
 #include "Seguement.h"
+#include "Fenetre.h"
 #include <iostream>
 #include<sstream>
 
 using namespace std;
 
-DessineVisiteur::DessineVisiteur(const string &adresse, int port){
+DessineVisiteur::DessineVisiteur(const string &adresse, int port, const Fenetre& f){
 	
 	MonWinsock::getInstance();
 
@@ -29,6 +30,10 @@ DessineVisiteur::DessineVisiteur(const string &adresse, int port){
 	
 	if (connect(_sock, (SOCKADDR *)&_sockaddr, sizeof(sockaddr)) == SOCKET_ERROR)
 		throw "La connexion au serveur de dessin a échoué";
+
+	string req = f.encoder();
+	if (send(_sock, req.c_str(), req.length(), 0) == SOCKET_ERROR)
+		throw "échec de l'envoi de la requête d'ouverture de fenêtre graphique";
 }
 
 DessineVisiteur::~DessineVisiteur() {
@@ -42,28 +47,31 @@ DessineVisiteur::~DessineVisiteur() {
 }
 
 void DessineVisiteur::visite(const Cercle *c) const{
-	ostringstream oss;
-	
-	oss << "testFenetre" << ", " << 0 << ", " << 0 << ", " << 500 << ", " << 500 << "\r\n";
-
-	string req = oss.str();
-
+	string req = c->encoder();
 	if (send(_sock, req.c_str(), req.length(), 0) == SOCKET_ERROR)
-		throw "échec de l'envoi de la requête d'ouverture de fenêtre graphique";
+		throw "échec de l'envoi de la requête de dessin d'un cercle";
 }
 
 void DessineVisiteur::visite(const Triangle *t) const {
-	cout << "je dessine le triangle : " << endl << *t;
+	string req = t->encoder();
+	if (send(_sock, req.c_str(), req.length(), 0) == SOCKET_ERROR)
+		throw "échec de l'envoi de la requête de dessin d'un triangle";
 }
 
 void DessineVisiteur::visite(const Polygone *q) const {
-	cout << "je dessine le Quelquonque : " << endl << *q;
+	string req = q->encoder();
+	if (send(_sock, req.c_str(), req.length(), 0) == SOCKET_ERROR)
+		throw "échec de l'envoi de la requête de dessin d'un polygone";
 }
 
 void DessineVisiteur::visite(const Compose *c) const {
-	cout << "je dessine le compose : " << endl << *c;
+	string req = c->encoder();
+	if (send(_sock, req.c_str(), req.length(), 0) == SOCKET_ERROR)
+		throw "échec de l'envoi de la requête de dessin d'un compose";
 }
 
 void DessineVisiteur::visite(const Seguement *s) const {
-	cout << "je dessine le seguement : " << endl << *s;
+	string req = s->encoder();
+	if (send(_sock, req.c_str(), req.length(), 0) == SOCKET_ERROR)
+		throw "échec de l'envoi de la requête de dessin d'un Seguement";
 }

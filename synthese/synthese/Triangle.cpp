@@ -44,10 +44,10 @@ void Triangle::affiche(ostream &os) const{
 
 const string Triangle::encoder()const {
 	ostringstream oss;
-	oss << "Triangle" << "," << getCouleur() << ","
+	oss << "triangle" << "," << getCouleur() << ","
 		<< _p1.getX() << "," << _p1.getY() << ","
 		<< _p2.getX() << "," << _p2.getY() << ","
-		<< _p3.getX() << "," << _p3.getY() << "," << "\r\n";
+		<< _p3.getX() << "," << _p3.getY() <<"\r\n";
 	return oss.str();
 }
 

@@ -32,7 +32,7 @@ void Seguement::affiche(ostream& os)const {
 
 const string Seguement::encoder()const {
 	ostringstream oss;
-	oss << "Segument" << "," << getCouleur() << "," << _deb.getX() << "," << _fin.getY() << "\r\n";
+	oss << "segument" << "," << getCouleur() << "," << _deb.getX() << "," << _fin.getY() << "\r\n";
 	return oss.str();	
 }
 
