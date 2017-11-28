@@ -33,9 +33,9 @@ public class ExpertTriangle extends Expert {
 		int x1 = Integer.parseInt(arguments[2].trim());
 		int y1 = Integer.parseInt(arguments[3].trim());
 		int x2 = Integer.parseInt(arguments[4].trim());
-		int y2 = Integer.parseInt(arguments[4].trim());
-		int x3 = Integer.parseInt(arguments[5].trim());
-		int y3 = Integer.parseInt(arguments[6].trim());
+		int y2 = Integer.parseInt(arguments[5].trim());
+		int x3 = Integer.parseInt(arguments[6].trim());
+		int y3 = Integer.parseInt(arguments[7].trim());
 
 		// On dessine
 		DrawableTriangle triangle = new DrawableTriangle(x1, y1, x2, y2, x3, y3, couleur);

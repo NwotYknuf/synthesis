@@ -46,7 +46,8 @@ public class DrawableTriangle extends DrawableForme{
 		c.setColor(this.couleur);
 		int xT[] = {x, x2, x3 };
 		int yT[] = {y, y2, y3 };
-		c.fillPolygon(xT,  yT,  3);
+
+		c.fillPolygon(xT, yT, 3);
 		c.setColor(couleur);
 	}
 }

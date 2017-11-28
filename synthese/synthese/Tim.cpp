@@ -23,14 +23,14 @@ int main(){
 	DessineVisiteur* test;
 	Cercle* c1 = new Cercle("rouge", 10, 10, 10);
 
-	Vecteur2D p1(0, 0);
-	Vecteur2D p2(0, 100);
-	Vecteur2D p3(100, 0);
+	Vecteur2D p1(10, 10);
+	Vecteur2D p2(10, 100);
+	Vecteur2D p3(100, 10);
 	Vecteur2D p4(100, 100);
 
 	Triangle* t1 = new Triangle("bleu",p1, p2, p3);
 	Triangle* t2 = new Triangle("bleu", p2, p3, p4);
-	Polygone* p = new Polygone("rouge");
+	Polygone* p = new Polygone("cyan");
 
 	p->ajouteTriangle(*t1);
 	p->ajouteTriangle(*t2);
@@ -39,7 +39,6 @@ int main(){
 	Cercle* c2 = new Cercle("rouge", 100, 100, 50);
 	cmp->ajouteForme(*c1);
 	cmp->ajouteForme(*c2);
-
 
 	try {
 		test = new DessineVisiteur(adresse, port, fenetre);
@@ -50,10 +49,7 @@ int main(){
 		exit(1);
 	}
 	
-	test->visite(cmp);
-	
-	c2 = (Cercle *)((c2->echelle(p1, 2)));
-	test->visite(c2);
+	test->visite(p);
 
 	system("pause");
 

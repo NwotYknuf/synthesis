@@ -29,7 +29,7 @@ public class DrawableCercle extends DrawableForme{
 	public void draw(Graphics c) {
 		Color couleur = c.getColor();
 		c.setColor(this.couleur);
-		c.fillOval(this.x, this.y, this.rayon, this.rayon);
+		c.fillOval(x - rayon/2, y - rayon/2, rayon, rayon);
 		c.setColor(couleur);
 	}
 }
