@@ -32,7 +32,7 @@ void Segment::affiche(ostream& os)const {
 
 const string Segment::encoder()const {
 	ostringstream oss;
-	oss << "segument" << "," << getCouleur() << "," << _deb.getX() << "," << _fin.getY() << "\r\n";
+	oss << "segument" << "," << getCouleur() << "," << _deb.getX() << "," << _fin.getY();
 	return oss.str();	
 }
 

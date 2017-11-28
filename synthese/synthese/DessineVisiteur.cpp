@@ -46,30 +46,35 @@ DessineVisiteur::~DessineVisiteur() {
 
 void DessineVisiteur::visite(const Cercle *c) const{
 	string req = c->encoder();
+	req += "\r\n";
 	if (send(_sock, req.c_str(), req.length(), 0) == SOCKET_ERROR)
 		throw "échec de l'envoi de la requête de dessin d'un cercle";
 }
 
 void DessineVisiteur::visite(const Triangle *t) const {
 	string req = t->encoder();
+	req += "\r\n";
 	if (send(_sock, req.c_str(), req.length(), 0) == SOCKET_ERROR)
 		throw "échec de l'envoi de la requête de dessin d'un triangle";
 }
 
 void DessineVisiteur::visite(const Polygone *q) const {
 	string req = q->encoder();
+	req += "\r\n";
 	if (send(_sock, req.c_str(), req.length(), 0) == SOCKET_ERROR)
 		throw "échec de l'envoi de la requête de dessin d'un polygone";
 }
 
 void DessineVisiteur::visite(const Compose *c) const {
 	string req = c->encoder();
+	req += "\r\n";
 	if (send(_sock, req.c_str(), req.length(), 0) == SOCKET_ERROR)
 		throw "échec de l'envoi de la requête de dessin d'un compose";
 }
 
 void DessineVisiteur::visite(const Segment *s) const {
 	string req = s->encoder();
+	req += "\r\n";
 	if (send(_sock, req.c_str(), req.length(), 0) == SOCKET_ERROR)
 		throw "échec de l'envoi de la requête de dessin d'un Seguement";
 }
