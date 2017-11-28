@@ -20,5 +20,5 @@ public :
 	void visite(const Triangle*)const;
 	void visite(const Polygone*)const;
 	void visite(const Compose*)const;
-	void visite(const Seguement*)const;
+	void visite(const Segment*)const;
 };

@@ -51,14 +51,14 @@
     <ClCompile Include="Polygone.cpp">
       <Filter>Fichiers sources\Formes</Filter>
     </ClCompile>
-    <ClCompile Include="Seguement.cpp">
-      <Filter>Fichiers sources\Formes</Filter>
-    </ClCompile>
     <ClCompile Include="Forme.cpp">
       <Filter>Fichiers sources\Formes</Filter>
     </ClCompile>
     <ClCompile Include="Fenetre.cpp">
       <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Segment.cpp">
+      <Filter>Fichiers sources\Formes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -89,14 +89,14 @@
     <ClInclude Include="Polygone.h">
       <Filter>Fichiers d%27en-tête\Formes</Filter>
     </ClInclude>
-    <ClInclude Include="Seguement.h">
-      <Filter>Fichiers d%27en-tête\Formes</Filter>
-    </ClInclude>
     <ClInclude Include="Forme.h">
       <Filter>Fichiers d%27en-tête\Formes</Filter>
     </ClInclude>
     <ClInclude Include="Fenetre.h">
       <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Segment.h">
+      <Filter>Fichiers d%27en-tête\Formes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

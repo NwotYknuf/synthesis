@@ -31,7 +31,7 @@ public class DrawableTriangle extends DrawableForme{
 		this.y3 = y3;
 	}
 
-	public DrawableTriangle(int x, int y, int x2, int y2, int x3, int y3, Color couleur) {
+	public DrawableTriangle(int x, int y, int x2, int y2, int x3, int y3, String couleur) throws Exception {
 		super(couleur);
 		setX(x);
 		setY(y);

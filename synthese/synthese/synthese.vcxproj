@@ -153,7 +153,7 @@
     <ClCompile Include="Forme.cpp" />
     <ClCompile Include="MonWinsock.cpp" />
     <ClCompile Include="Polygone.cpp" />
-    <ClCompile Include="Seguement.cpp" />
+    <ClCompile Include="Segment.cpp" />
     <ClCompile Include="Tim.cpp" />
     <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="Vecteur2D.cpp" />
@@ -166,7 +166,7 @@
     <ClInclude Include="Forme.h" />
     <ClInclude Include="MonWinsock.h" />
     <ClInclude Include="Polygone.h" />
-    <ClInclude Include="Seguement.h" />
+    <ClInclude Include="Segment.h" />
     <ClInclude Include="Triangle.h" />
     <ClInclude Include="Vecteur2D.h" />
     <ClInclude Include="Visitable.h" />

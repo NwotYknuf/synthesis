@@ -6,17 +6,17 @@
 
 using namespace std;
 
-class Seguement : public Forme, public Visitable{
+class Segment : public Forme, public Visitable{
 private:
 	Vecteur2D _deb;
 	Vecteur2D _fin;
 
 public:
-	Seguement();
-	Seguement(const string&, const Vecteur2D&, const Vecteur2D&);
-	Seguement(const string&, double, double, double, double);
-	Seguement(const Seguement&);
-	~Seguement();
+	Segment();
+	Segment(const string&, const Vecteur2D&, const Vecteur2D&);
+	Segment(const string&, double, double, double, double);
+	Segment(const Segment&);
+	~Segment();
 
 	const Vecteur2D& getDeb()const { return _deb; }
 	const Vecteur2D& getFin()const { return _fin; }

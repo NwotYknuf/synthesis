@@ -1,54 +1,54 @@
-#include "Seguement.h"
+#include "Segment.h"
 #include"Visiteur.h"
 #include <sstream>
 
-Seguement::Seguement() : Forme(), _deb(), _fin() { }
+Segment::Segment() : Forme(), _deb(), _fin() { }
 
-Seguement::Seguement(const string& couleur, const Vecteur2D& deb, const Vecteur2D& fin)
+Segment::Segment(const string& couleur, const Vecteur2D& deb, const Vecteur2D& fin)
 	: Forme(couleur), _deb(deb), _fin(fin) { }
 
-Seguement::Seguement(const string& couleur, double x1, double y1, double x2, double y2)
+Segment::Segment(const string& couleur, double x1, double y1, double x2, double y2)
 	: Forme(couleur), _deb(x1, y1), _fin(x2, y2) { }
 
-Seguement::Seguement(const Seguement &s)
+Segment::Segment(const Segment &s)
 	: Forme(s.getCouleur()), _deb(s._deb), _fin(s._fin) { }
 
-Seguement::~Seguement() { }
+Segment::~Segment() { }
 
-Forme*  Seguement::clone() const {
-	return new Seguement(*this);
+Forme*  Segment::clone() const {
+	return new Segment(*this);
 }
 
-double Seguement::aire()const {
+double Segment::aire()const {
 	return 0.0;
 }
 
-void Seguement::affiche(ostream& os)const {
+void Segment::affiche(ostream& os)const {
 	os << "Segument" << endl;
 	Forme::affiche(os);
 	os << "	-deb : " << _deb << endl;
 	os << "	-fin : " << _fin << endl;
 }
 
-const string Seguement::encoder()const {
+const string Segment::encoder()const {
 	ostringstream oss;
 	oss << "segument" << "," << getCouleur() << "," << _deb.getX() << "," << _fin.getY() << "\r\n";
 	return oss.str();	
 }
 
-void Seguement::accepte(Visiteur* v) {
+void Segment::accepte(Visiteur* v) {
 	v->visite(this);
 }
 
-Forme* Seguement::translation(const Vecteur2D & deplacement)const {
-	Seguement* s = new Seguement(*this);
+Forme* Segment::translation(const Vecteur2D & deplacement)const {
+	Segment* s = new Segment(*this);
 	s->_deb = _deb + deplacement;
 	s->_fin = _deb + deplacement;
 	return s;
 }
 
-Forme* Seguement::rotation(const Vecteur2D & centre, double angle)const {
-	Seguement* s = new Seguement(*this);
+Forme* Segment::rotation(const Vecteur2D & centre, double angle)const {
+	Segment* s = new Segment(*this);
 	double a = centre.getX();
 	double b = centre.getY();
 	double x = s->_deb.getX();
@@ -66,8 +66,8 @@ Forme* Seguement::rotation(const Vecteur2D & centre, double angle)const {
 	return s;
 }
 
-Forme* Seguement::echelle(const Vecteur2D & centre, double facteur)const {
-	Seguement* s = new Seguement(*this);
+Forme* Segment::echelle(const Vecteur2D & centre, double facteur)const {
+	Segment* s = new Segment(*this);
 
 	s->_deb = s->_deb - centre;
 	s->_deb = s->_deb * facteur;

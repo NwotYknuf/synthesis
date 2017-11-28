@@ -4,7 +4,7 @@ class Cercle;
 class Triangle;
 class Polygone;
 class Compose;
-class Seguement;
+class Segment;
 
 class Visiteur {
 private:
@@ -14,6 +14,6 @@ public:
 	virtual void visite(const Triangle*)const = 0;
 	virtual void visite(const Polygone*)const = 0;
 	virtual void visite(const Compose*)const = 0;
-	virtual void visite(const Seguement*)const =0;
+	virtual void visite(const Segment*)const =0;
 
 };

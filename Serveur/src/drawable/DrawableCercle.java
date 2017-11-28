@@ -19,7 +19,7 @@ public class DrawableCercle extends DrawableForme{
 		this.rayon = rayon;
 	}
 
-	public DrawableCercle(int x, int y, int rayon, Color couleur) {
+	public DrawableCercle(int x, int y, int rayon, String couleur) throws Exception{
 		super(couleur);
 		setX(x);
 		setY(y);

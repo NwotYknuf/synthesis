@@ -1,14 +1,12 @@
 #pragma once
-
 #define _WINSOCK_DEPRECATED_NO_WARNINGS
-
 #include "DessineVisiteur.h"
 #include "Polygone.h"
 #include "Cercle.h"
 #include "Triangle.h"
 #include "Compose.h"
 #include "MonWinsock.h"
-#include "Seguement.h"
+#include "Segment.h"
 #include "Fenetre.h"
 #include <iostream>
 #include<sstream>
@@ -70,7 +68,7 @@ void DessineVisiteur::visite(const Compose *c) const {
 		throw "échec de l'envoi de la requête de dessin d'un compose";
 }
 
-void DessineVisiteur::visite(const Seguement *s) const {
+void DessineVisiteur::visite(const Segment *s) const {
 	string req = s->encoder();
 	if (send(_sock, req.c_str(), req.length(), 0) == SOCKET_ERROR)
 		throw "échec de l'envoi de la requête de dessin d'un Seguement";

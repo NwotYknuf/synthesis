@@ -23,7 +23,7 @@ public class DrawableSegment extends DrawableForme{
 		this.y2 = y2;
 	}
 
-	public DrawableSegment(int x, int y, int x2, int y2, Color couleur) {
+	public DrawableSegment(int x, int y, int x2, int y2, String couleur) throws Exception{
 		super(couleur);
 		setX(x);
 		setY(y);

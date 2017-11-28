@@ -1,15 +1,15 @@
 package expert;
-import drawable.DrawableCercle;
+import drawable.DrawableSegment;
 import main.JCanvas;
 
-
-public class ExpertCercle extends Expert {
+public class ExpertSeguement extends Expert {
 
 	private JCanvas cadre;
 	
-	public ExpertCercle(Expert e, JCanvas c) {
+	public ExpertSeguement(Expert e, JCanvas jc) {
 		super(e);
-		cadre = c;
+		cadre = jc;
+		
 	}
 	
 	@Override
@@ -17,7 +17,7 @@ public class ExpertCercle extends Expert {
 		
 		String arguments[] = requete.split(",");
 		
-		if(arguments[0].equals("cercle"))
+		if(arguments[0].equals("seguement"))
 			gere(requete);
 		else {
 			if(getSuivant() != null)
@@ -28,20 +28,19 @@ public class ExpertCercle extends Expert {
 
 	@Override
 	public void gere(String requete) throws Exception {
-		
+
 		//On récupère les arguments
 		String arguments[] = requete.split(",");
 		
 		String couleur = arguments[1].trim();
-	    int Ox = Integer.parseInt(arguments[2].trim());
-	    int Oy = Integer.parseInt(arguments[3].trim());
-	    int rayon = Integer.parseInt(arguments[4].trim());
+	    int x1 = Integer.parseInt(arguments[2].trim());
+	    int y1 = Integer.parseInt(arguments[3].trim());
+	    int x2 = Integer.parseInt(arguments[4].trim());
+	    int y2 = Integer.parseInt(arguments[4].trim());
 	    
 	    //On dessine
-	    DrawableCercle cercle = new DrawableCercle(Ox, Oy, rayon, couleur);
-	    cadre.addDrawable(cercle);	    
+	    DrawableSegment segment = new DrawableSegment(x1, y1, x2, y2, couleur);
+	    cadre.addDrawable(segment);	    
 	}
-	
-	
 
 }
