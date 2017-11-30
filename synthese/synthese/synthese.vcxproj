@@ -149,6 +149,10 @@
     <ClCompile Include="Cercle.cpp" />
     <ClCompile Include="Compose.cpp" />
     <ClCompile Include="DessineVisiteur.cpp" />
+    <ClCompile Include="ExpertChargeCercle.cpp" />
+    <ClCompile Include="ExpertChargePolygone.cpp" />
+    <ClCompile Include="ExpertChargeSeguement.cpp" />
+    <ClCompile Include="ExpertChargeTriangle.cpp" />
     <ClCompile Include="Fenetre.cpp" />
     <ClCompile Include="Forme.cpp" />
     <ClCompile Include="MonWinsock.cpp" />
@@ -157,12 +161,18 @@
     <ClCompile Include="Segment.cpp" />
     <ClCompile Include="Tim.cpp" />
     <ClCompile Include="Triangle.cpp" />
+    <ClCompile Include="utils.cpp" />
     <ClCompile Include="Vecteur2D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cercle.h" />
     <ClInclude Include="Compose.h" />
     <ClInclude Include="DessineVisiteur.h" />
+    <ClInclude Include="Expert.h" />
+    <ClInclude Include="ExpertChargeCercle.h" />
+    <ClInclude Include="ExpertChargePolygone.h" />
+    <ClInclude Include="ExpertChargeSeguement.h" />
+    <ClInclude Include="ExpertChargeTriangle.h" />
     <ClInclude Include="Fenetre.h" />
     <ClInclude Include="Forme.h" />
     <ClInclude Include="MonWinsock.h" />
@@ -170,6 +180,7 @@
     <ClInclude Include="SauvegardeVisiteur.h" />
     <ClInclude Include="Segment.h" />
     <ClInclude Include="Triangle.h" />
+    <ClInclude Include="utils.h" />
     <ClInclude Include="Vecteur2D.h" />
     <ClInclude Include="Visitable.h" />
     <ClInclude Include="Visiteur.h" />

@@ -4,12 +4,15 @@
 #include <string>
 #include "DessineVisiteur.h"
 #include "SauvegardeVisiteur.h"
+#include	"ExpertChargeTriangle.h"
+#include "ExpertChargeCercle.h"
 #include "Cercle.h"
 #include "Triangle.h"
 #include	"Polygone.h"
 #include "Compose.h"
 #include "Fenetre.h"
 #include "Forme.h"
+#include <fstream>
 
 const double PI = 3.1415926535;
 
@@ -61,7 +64,25 @@ int main(){
 
 	SauvegardeVisiteur* Napoleon = new SauvegardeVisiteur();
 
-	Napoleon->visite(cmp);
+	Napoleon->visite(c1);
+
+	ExpertChargeTriangle* chargeCercle= new ExpertChargeTriangle(NULL);
+	ExpertChargeCercle* chargeTriangle = new ExpertChargeCercle(chargeCercle);
+
+	ifstream fichier("forme.txt", ios::in);
+	string req = "";
+
+	if (fichier) {
+		fichier >> req;
+		fichier.close();
+	}
+	else {
+		cout << "Impossible d'ouvrir le fichier !" << endl;
+	}
+
+	Forme* recup = chargeTriangle->gere(req);
+
+	cout << *recup << endl;
 
 	system("pause");
 

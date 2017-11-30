@@ -25,6 +25,12 @@
     <Filter Include="Fichiers sources\Visiteurs">
       <UniqueIdentifier>{dc1bcd10-9c54-4cff-8b90-ee59d1e7013c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers sources\Chaine">
+      <UniqueIdentifier>{d6c9e3fa-8306-4e65-a366-09ac6201bfb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Chaine">
+      <UniqueIdentifier>{192ed064-1e99-4eeb-980e-889ca10f02a2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Tim.cpp">
@@ -45,9 +51,6 @@
     <ClCompile Include="Compose.cpp">
       <Filter>Fichiers sources\Formes</Filter>
     </ClCompile>
-    <ClCompile Include="MonWinsock.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="Polygone.cpp">
       <Filter>Fichiers sources\Formes</Filter>
     </ClCompile>
@@ -60,8 +63,26 @@
     <ClCompile Include="Segment.cpp">
       <Filter>Fichiers sources\Formes</Filter>
     </ClCompile>
+    <ClCompile Include="MonWinsock.cpp">
+      <Filter>Fichiers sources\Visiteurs</Filter>
+    </ClCompile>
     <ClCompile Include="SauvegardeVisiteur.cpp">
-      <Filter>Fichiers sources\Formes</Filter>
+      <Filter>Fichiers sources\Visiteurs</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpertChargeCercle.cpp">
+      <Filter>Fichiers sources\Chaine</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpertChargeTriangle.cpp">
+      <Filter>Fichiers sources\Chaine</Filter>
+    </ClCompile>
+    <ClCompile Include="utils.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpertChargeSeguement.cpp">
+      <Filter>Fichiers sources\Chaine</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpertChargePolygone.cpp">
+      <Filter>Fichiers sources\Chaine</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -86,9 +107,6 @@
     <ClInclude Include="Compose.h">
       <Filter>Fichiers d%27en-tête\Formes</Filter>
     </ClInclude>
-    <ClInclude Include="MonWinsock.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="Polygone.h">
       <Filter>Fichiers d%27en-tête\Formes</Filter>
     </ClInclude>
@@ -103,6 +121,27 @@
     </ClInclude>
     <ClInclude Include="SauvegardeVisiteur.h">
       <Filter>Fichiers d%27en-tête\Visiteurs</Filter>
+    </ClInclude>
+    <ClInclude Include="MonWinsock.h">
+      <Filter>Fichiers d%27en-tête\Visiteurs</Filter>
+    </ClInclude>
+    <ClInclude Include="Expert.h">
+      <Filter>Fichiers d%27en-tête\Chaine</Filter>
+    </ClInclude>
+    <ClInclude Include="ExpertChargeCercle.h">
+      <Filter>Fichiers d%27en-tête\Chaine</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="ExpertChargeTriangle.h">
+      <Filter>Fichiers d%27en-tête\Chaine</Filter>
+    </ClInclude>
+    <ClInclude Include="ExpertChargeSeguement.h">
+      <Filter>Fichiers d%27en-tête\Chaine</Filter>
+    </ClInclude>
+    <ClInclude Include="ExpertChargePolygone.h">
+      <Filter>Fichiers d%27en-tête\Chaine</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
