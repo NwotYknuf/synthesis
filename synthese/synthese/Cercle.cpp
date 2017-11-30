@@ -19,7 +19,8 @@ Cercle::Cercle(string c, const Vecteur2D &p, double rayon) : Forme(c), _centre(p
 	_rayon = rayon;
 }
 
-Cercle::Cercle(const Cercle &c) : Forme(c.getCouleur()), _centre(c._centre) {
+Cercle::Cercle(const Cercle &c) : 
+	Forme(c.getCouleur()), _centre(c._centre) {
 	_rayon = c._rayon;
 }
 

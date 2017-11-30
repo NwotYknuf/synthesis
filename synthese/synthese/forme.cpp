@@ -3,8 +3,8 @@
 #include <iostream>
 #include<string>
 
-Forme::Forme()
-{
+Forme::Forme(){
+	_couleur = "";
 }
 
 Forme::Forme(const string &c) {

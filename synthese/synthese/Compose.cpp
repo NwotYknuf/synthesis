@@ -57,7 +57,7 @@ const string Compose::encoder()const {
 	oss << "compose,";
 
 	for (Forme* f : _formes) {
-		oss << f->encoder() << ";";
+		oss << "[" << f->encoder() << "]";
 	}
 
 	return oss.str();

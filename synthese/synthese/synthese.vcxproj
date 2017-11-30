@@ -153,6 +153,7 @@
     <ClCompile Include="Forme.cpp" />
     <ClCompile Include="MonWinsock.cpp" />
     <ClCompile Include="Polygone.cpp" />
+    <ClCompile Include="SauvegardeVisiteur.cpp" />
     <ClCompile Include="Segment.cpp" />
     <ClCompile Include="Tim.cpp" />
     <ClCompile Include="Triangle.cpp" />
@@ -166,11 +167,15 @@
     <ClInclude Include="Forme.h" />
     <ClInclude Include="MonWinsock.h" />
     <ClInclude Include="Polygone.h" />
+    <ClInclude Include="SauvegardeVisiteur.h" />
     <ClInclude Include="Segment.h" />
     <ClInclude Include="Triangle.h" />
     <ClInclude Include="Vecteur2D.h" />
     <ClInclude Include="Visitable.h" />
     <ClInclude Include="Visiteur.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -60,6 +60,9 @@
     <ClCompile Include="Segment.cpp">
       <Filter>Fichiers sources\Formes</Filter>
     </ClCompile>
+    <ClCompile Include="SauvegardeVisiteur.cpp">
+      <Filter>Fichiers sources\Formes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vecteur2D.h">
@@ -98,5 +101,11 @@
     <ClInclude Include="Segment.h">
       <Filter>Fichiers d%27en-tête\Formes</Filter>
     </ClInclude>
+    <ClInclude Include="SauvegardeVisiteur.h">
+      <Filter>Fichiers d%27en-tête\Visiteurs</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

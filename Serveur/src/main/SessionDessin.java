@@ -40,6 +40,9 @@ public class SessionDessin extends Thread{
 			jc.setPreferredSize(new Dimension(largeur, hauteur));
 			GUIHelper.showOnFrame(jc,titre);
 			
+			
+			
+			
 			ExpertSegment Segment = new ExpertSegment(null, jc);
 			ExpertCercle Cercle = new ExpertCercle(Segment, jc);
 			ExpertTriangle Triangle = new ExpertTriangle(Cercle, jc);
