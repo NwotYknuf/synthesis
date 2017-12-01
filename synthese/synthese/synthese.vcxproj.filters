@@ -78,13 +78,13 @@
     <ClCompile Include="utils.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="ExpertChargeSeguement.cpp">
-      <Filter>Fichiers sources\Chaine</Filter>
-    </ClCompile>
     <ClCompile Include="ExpertChargePolygone.cpp">
       <Filter>Fichiers sources\Chaine</Filter>
     </ClCompile>
     <ClCompile Include="ExpertChargeCompose.cpp">
+      <Filter>Fichiers sources\Chaine</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpertChargeSegment.cpp">
       <Filter>Fichiers sources\Chaine</Filter>
     </ClCompile>
   </ItemGroup>
@@ -140,13 +140,13 @@
     <ClInclude Include="ExpertChargeTriangle.h">
       <Filter>Fichiers d%27en-tête\Chaine</Filter>
     </ClInclude>
-    <ClInclude Include="ExpertChargeSeguement.h">
-      <Filter>Fichiers d%27en-tête\Chaine</Filter>
-    </ClInclude>
     <ClInclude Include="ExpertChargePolygone.h">
       <Filter>Fichiers d%27en-tête\Chaine</Filter>
     </ClInclude>
     <ClInclude Include="ExpertChargeCompose.h">
+      <Filter>Fichiers d%27en-tête\Chaine</Filter>
+    </ClInclude>
+    <ClInclude Include="ExpertChargeSegment.h">
       <Filter>Fichiers d%27en-tête\Chaine</Filter>
     </ClInclude>
   </ItemGroup>

@@ -2,19 +2,20 @@
 #include "Vecteur2D.h"
 #include <iostream>
 #include <string>
+#include <fstream>
 #include "DessineVisiteur.h"
 #include "SauvegardeVisiteur.h"
+#include "ExpertChargeCompose.h"
+#include "ExpertChargePolygone.h"
 #include	"ExpertChargeTriangle.h"
 #include "ExpertChargeCercle.h"
+#include "ExpertChargeSegment.h"
 #include "Cercle.h"
 #include "Triangle.h"
 #include	"Polygone.h"
 #include "Compose.h"
-#include "Fenetre.h"
 #include "Segment.h"
-#include "Forme.h"
-#include <fstream>
-#include "utils.h"
+#include "Fenetre.h"
 
 const double PI = 3.1415926535;
 

@@ -152,7 +152,7 @@
     <ClCompile Include="ExpertChargeCercle.cpp" />
     <ClCompile Include="ExpertChargeCompose.cpp" />
     <ClCompile Include="ExpertChargePolygone.cpp" />
-    <ClCompile Include="ExpertChargeSeguement.cpp" />
+    <ClCompile Include="ExpertChargeSegment.cpp" />
     <ClCompile Include="ExpertChargeTriangle.cpp" />
     <ClCompile Include="Fenetre.cpp" />
     <ClCompile Include="Forme.cpp" />
@@ -173,7 +173,7 @@
     <ClInclude Include="ExpertChargeCercle.h" />
     <ClInclude Include="ExpertChargeCompose.h" />
     <ClInclude Include="ExpertChargePolygone.h" />
-    <ClInclude Include="ExpertChargeSeguement.h" />
+    <ClInclude Include="ExpertChargeSegment.h" />
     <ClInclude Include="ExpertChargeTriangle.h" />
     <ClInclude Include="Fenetre.h" />
     <ClInclude Include="Forme.h" />

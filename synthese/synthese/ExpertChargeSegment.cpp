@@ -1,9 +1,9 @@
 #pragma once
-#include "ExpertChargeSeguement.h"
+#include "ExpertChargeSegment.h"
 #include "utils.h"
 #include "Segment.h"
 
-Forme* ExpertChargeSeguement::gere(const string& req) const {
+Forme* ExpertChargeSegment::gere(const string& req) const {
 	vector<string> args;
 	split(req, ",", args);
 
