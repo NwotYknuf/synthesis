@@ -6,9 +6,9 @@ Forme* ExpertChargeTriangle::gere(const string &req) const {
 	vector<string> args;
 	split(req, ",", args);
 
-	if (args[0] == "cercle") {
+	if (args[0] == "triangle") {
 
-		string couleur = args[1];
+		string* couleur = new string(args[1]);
 		double Ax = stod(args[2]);
 		double Ay = stod(args[3]);
 		double Bx = stod(args[4]);
@@ -16,7 +16,7 @@ Forme* ExpertChargeTriangle::gere(const string &req) const {
 		double Cx = stod(args[6]);
 		double Cy = stod(args[7]);
 
-		return new Triangle(couleur, Vecteur2D(Ax, Ay),
+		return new Triangle(*couleur, Vecteur2D(Ax, Ay),
 			Vecteur2D(Bx, By), Vecteur2D(Cx, Cy));
 	}
 	else {

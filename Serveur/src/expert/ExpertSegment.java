@@ -29,7 +29,6 @@ public class ExpertSegment extends Expert {
 
 	@Override
 	public void gere(String requete) throws Exception {
-
 		// On récupère les arguments
 		String arguments[] = requete.split(",");
 

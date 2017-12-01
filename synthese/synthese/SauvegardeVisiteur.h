@@ -24,4 +24,3 @@ public:
 	void visite(const Compose*)const;
 	void visite(const Segment*)const;
 };
-

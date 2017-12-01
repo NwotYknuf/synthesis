@@ -67,7 +67,7 @@ void getComposants(string str, char splitDebut, char splitFin, vector<string>& c
 		//pos >= longueur de la chaine OU on a trouvé la fin du composant
 		if (pos <= str.size()) {
 			fin = pos;
-			composants.push_back(str.substr(debut + 1, fin - debut - 1));
+			composants.push_back(str.substr(debut + 1, fin - debut - 2));
 		}		
 	}
 }

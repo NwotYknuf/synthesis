@@ -1,7 +1,8 @@
+#pragma once
 #include "Fenetre.h"
 #include <sstream>
 
-Fenetre::Fenetre() : _pos(), _taille(){
+Fenetre::Fenetre() : _taille(){
 	_titre = "";
 }
 

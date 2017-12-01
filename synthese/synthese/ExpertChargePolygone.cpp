@@ -6,14 +6,17 @@ Forme* ExpertChargePolygone::gere(const string& req) const {
 	vector<string> args;
 	split(req, ",", args);
 
-	Polygone* res = new Polygone();
 
 	if (args[0] == "polygone") {
-		string suiteReq = req.substr(9, 0);
-		args.clear();
-		split(suiteReq, ";", args);
+		string suiteReq = req.substr(args[0].size() + 1 + args[1].size() + 1);
+		
+		vector<string> composants;
+		split(suiteReq, ",", composants);
+		string* couleur = new string(args[1]);
 
-		for(string ssReq : args){
+		Polygone* res = new Polygone(*couleur);
+
+		for(string ssReq : composants){
 			res->ajouteTriangle(*(Triangle*)getSuivant()->gere(ssReq));
 		}
 

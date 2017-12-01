@@ -44,7 +44,6 @@ public class ExpertCompose extends Expert {
 		
 		return res;
 	}
-	
 
 	@Override
 	public void decide(String requete) throws Exception {
@@ -61,7 +60,9 @@ public class ExpertCompose extends Expert {
 	@Override
 	public void gere(String requete) throws Exception {
 		// On récupère les arguments
-		String suiteReq = requete.substring(8, requete.length());
+		String args[] = requete.split(",");
+		
+		String suiteReq = requete.substring(args[0].length() + 1 + args[1].length() + 1, requete.length());
 
 		ArrayList<String> composants = getComposants(suiteReq, '[', ']');
 		

@@ -55,7 +55,7 @@ void Compose::accepte(Visiteur*v) {
 const string Compose::encoder()const {
 	ostringstream oss;
 
-	oss << "compose,";
+	oss << "compose," << getCouleur() <<",";
 
 	for (Forme* f : _formes) {
 		oss << "[" << f->encoder() << "]";

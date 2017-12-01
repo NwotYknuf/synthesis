@@ -21,7 +21,8 @@ public class ExpertPolygone extends Expert {
 	@Override
 	public void gere(String requete) throws Exception {
 		// On récupère les arguments
-		String suiteReq = requete.substring(9, requete.length());
+		String args[] = requete.split(",");
+		String suiteReq = requete.substring(args[0].length() + 1 + args[1].length() + 1, requete.length());
 		
 		String ssReq[] = suiteReq.split(";");
 		

@@ -1,5 +1,5 @@
 #pragma once
-#include "Vecteur2D.h";
+#include "Vecteur2D.h"
 #include <string>
 
 using namespace std;
