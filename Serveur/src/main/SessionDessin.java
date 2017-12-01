@@ -27,22 +27,17 @@ public class SessionDessin extends Thread{
 			String arguments[] = requete.split(",");
 			
 			String titre;
-			int Ox, Oy, largeur, hauteur;
+			int largeur, hauteur;
 
 			titre = arguments[0].trim();
-			Ox = Integer.parseInt(arguments[1].trim());
-			Oy = Integer.parseInt(arguments[2].trim());
-			largeur = Integer.parseInt(arguments[3].trim());
-			hauteur = Integer.parseInt(arguments[4].trim());
+			largeur = Integer.parseInt(arguments[1].trim());
+			hauteur = Integer.parseInt(arguments[2].trim());
 
 			JCanvas jc = new JCanvas();
 			jc.setBackground(Color.BLACK);
 			jc.setPreferredSize(new Dimension(largeur, hauteur));
 			GUIHelper.showOnFrame(jc,titre);
-			
-			
-			
-			
+						
 			ExpertSegment Segment = new ExpertSegment(null, jc);
 			ExpertCercle Cercle = new ExpertCercle(Segment, jc);
 			ExpertTriangle Triangle = new ExpertTriangle(Cercle, jc);

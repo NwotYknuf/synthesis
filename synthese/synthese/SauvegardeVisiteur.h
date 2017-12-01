@@ -15,6 +15,9 @@ public:
 	SauvegardeVisiteur(const string &);
 	~SauvegardeVisiteur();
 
+	void setPath(const string &path) { _path = path; }
+	const string getPath()const { return _path; }
+
 	void visite(const Cercle*)const;
 	void visite(const Triangle*)const;
 	void visite(const Polygone*)const;

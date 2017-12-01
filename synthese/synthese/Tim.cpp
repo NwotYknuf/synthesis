@@ -24,12 +24,13 @@ int main(){
 	string adresse = "127.0.0.1";
 	int port = 8091;
 
-	Vecteur2D _pos(10, 10);
-	Vecteur2D _taille(500, 500);
+	Vecteur2D _taille(10.0, 10.0);
+	Vecteur2D p1(50.0, 50.0);
 
-	Fenetre fenetre("bonjour", _pos, _taille);
-	DessineVisiteur* PabloPicasso;
-	Cercle* c1 = new Cercle("rouge", 10, 10, 10);
+	Fenetre fenetre("bonjour", _taille);
+	DessineVisiteur* PabloPicasso = new DessineVisiteur(adresse, port, fenetre);
+
+	Cercle* c1 = new Cercle("rouge", p1, 50.0);
 
 	Vecteur2D p1(10, 10);
 	Vecteur2D p2(10, 100);
