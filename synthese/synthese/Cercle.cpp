@@ -43,7 +43,7 @@ void Cercle::affiche(ostream&os)const {
 
 const string Cercle::encoder() const {
 	ostringstream oss;
-	oss << "cercle" << ","<< getCouleur()<< "," << _centre.getX() << "," << _centre.getY() << "," << _rayon;
+	oss << "cercle" << ","<< getCouleur() << "," << (int)_centre.getX() << "," << (int)_centre.getY() << "," << _rayon;
 	return oss.str();
 }
 
@@ -59,13 +59,13 @@ Forme* Cercle::translation(const Vecteur2D & deplacement)const {
 
 Forme* Cercle::rotation(const Vecteur2D & centre , double angle)const {
 	Cercle* c = new Cercle(*this);
-	double a = centre.getX();
-	double b = centre.getY();
-	double x = c->_centre.getX();
-	double y = c->_centre.getY();
+	double x1 = centre.getX();
+	double y1 = centre.getY();
+	double x2 = c->_centre.getX();
+	double y2 = c->_centre.getY();
 	
-	c->_centre.setX(a + x * cos(angle) - y * sin(angle));
-	c->_centre.setY(b + x * sin(angle) + y * cos(angle));
+	c->_centre.setX((x2 - x1) * cos(angle) - (y2 - y1) * sin(angle) + x1);
+	c->_centre.setY((x2 - x1)*sin(angle) + (y2 - y1)*cos(angle) + y1);
 
 	return c;
 }

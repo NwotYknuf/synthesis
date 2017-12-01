@@ -11,8 +11,10 @@
 #include	"Polygone.h"
 #include "Compose.h"
 #include "Fenetre.h"
+#include "Segment.h"
 #include "Forme.h"
 #include <fstream>
+#include "utils.h"
 
 const double PI = 3.1415926535;
 
@@ -25,7 +27,7 @@ int main(){
 	Vecteur2D _taille(500, 500);
 
 	Fenetre fenetre("bonjour", _pos, _taille);
-	DessineVisiteur* PabloPicsso;
+	DessineVisiteur* PabloPicasso;
 	Cercle* c1 = new Cercle("rouge", 10, 10, 10);
 
 	Vecteur2D p1(10, 10);
@@ -33,6 +35,7 @@ int main(){
 	Vecteur2D p3(100, 10);
 	Vecteur2D p4(100, 100);
 
+	Segment*s = new Segment("rouge", 50, 50, 500, 500);
 	Triangle* t1 = new Triangle("rouge",p1, p2, p3);
 	Triangle* t2 = new Triangle("bleu", p2, p3, p4);
 	Polygone* p = new Polygone("cyan");
@@ -45,44 +48,24 @@ int main(){
 	cmp->ajouteForme(*c1);
 	cmp->ajouteForme(*c2);
 	cmp->ajouteForme(*p);
-
+	cmp->ajouteForme(*s);
+	
 	try {
-		PabloPicsso = new DessineVisiteur(adresse, port, fenetre);
+		PabloPicasso = new DessineVisiteur(adresse, port, fenetre);
 	}
 	catch(char* s){
 		cout << s << endl << "code :  "<< WSAGetLastError()<<endl;
 		system("pause");
 		exit(1);
 	}
-	
-	PabloPicsso->visite(cmp);
-	PabloPicsso->visite(t1);
 
-	t1 = (Triangle*)t1->echelle(p4, -2);
+	PabloPicasso->visite(cmp);
 
-	PabloPicsso->visite(t1);
+	cout << *cmp << endl;
+	Forme* transforme = (Compose*)cmp->rotation(p4, PI);
+	cout << *transforme;
 
-	SauvegardeVisiteur* Napoleon = new SauvegardeVisiteur();
-
-	Napoleon->visite(c1);
-
-	ExpertChargeTriangle* chargeCercle= new ExpertChargeTriangle(NULL);
-	ExpertChargeCercle* chargeTriangle = new ExpertChargeCercle(chargeCercle);
-
-	ifstream fichier("forme.txt", ios::in);
-	string req = "";
-
-	if (fichier) {
-		fichier >> req;
-		fichier.close();
-	}
-	else {
-		cout << "Impossible d'ouvrir le fichier !" << endl;
-	}
-
-	Forme* recup = chargeTriangle->gere(req);
-
-	cout << *recup << endl;
+	PabloPicasso->visite((Compose*)transforme);
 
 	system("pause");
 

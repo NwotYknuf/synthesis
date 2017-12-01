@@ -18,7 +18,7 @@ public class ExpertSegment extends Expert {
 
 		String arguments[] = requete.split(",");
 
-		if (arguments[0].equals("seguement"))
+		if (arguments[0].equals("segment"))
 			gere(requete);
 		else {
 			if (getSuivant() != null)

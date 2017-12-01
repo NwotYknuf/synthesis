@@ -150,6 +150,7 @@
     <ClCompile Include="Compose.cpp" />
     <ClCompile Include="DessineVisiteur.cpp" />
     <ClCompile Include="ExpertChargeCercle.cpp" />
+    <ClCompile Include="ExpertChargeCompose.cpp" />
     <ClCompile Include="ExpertChargePolygone.cpp" />
     <ClCompile Include="ExpertChargeSeguement.cpp" />
     <ClCompile Include="ExpertChargeTriangle.cpp" />
@@ -170,6 +171,7 @@
     <ClInclude Include="DessineVisiteur.h" />
     <ClInclude Include="Expert.h" />
     <ClInclude Include="ExpertChargeCercle.h" />
+    <ClInclude Include="ExpertChargeCompose.h" />
     <ClInclude Include="ExpertChargePolygone.h" />
     <ClInclude Include="ExpertChargeSeguement.h" />
     <ClInclude Include="ExpertChargeTriangle.h" />

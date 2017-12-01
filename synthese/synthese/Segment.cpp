@@ -32,8 +32,9 @@ void Segment::affiche(ostream& os)const {
 
 const string Segment::encoder()const {
 	ostringstream oss;
-	oss << "segment" << "," << getCouleur() << "," << _deb.getX() <<", " << _deb.getY()
-		<< "," << _fin.getX() << ", " << _fin.getY();
+	oss << "segment" << "," << getCouleur() 
+		<< "," << (int)_deb.getX() <<"," << (int)_deb.getY()
+		<< "," << (int)_fin.getX() << "," << (int)_fin.getY();
 	return oss.str();	
 }
 
@@ -50,19 +51,19 @@ Forme* Segment::translation(const Vecteur2D & deplacement)const {
 
 Forme* Segment::rotation(const Vecteur2D & centre, double angle)const {
 	Segment* s = new Segment(*this);
-	double a = centre.getX();
-	double b = centre.getY();
-	double x = s->_deb.getX();
-	double y = s->_deb.getY();
+	double x1 = centre.getX();
+	double y1 = centre.getY();
+	double x2 = s->_deb.getX();
+	double y2 = s->_deb.getY();
 
-	s->_deb.setX(a + x * cos(angle) - y * sin(angle));
-	s->_deb.setY(b + x * sin(angle) + y * cos(angle));
+	s->_deb.setX((x2 - x1) * cos(angle) - (y2 - y1) * sin(angle) + x1);
+	s->_deb.setY((x2 - x1)*sin(angle) + (y2 - y1)*cos(angle) + y1);
 
-	x = s->_fin.getX();
-	y = s->_fin.getY();
+	x2 = s->_fin.getX();
+	y2 = s->_fin.getY();
 	
-	s->_fin.setX(a + x * cos(angle) - y * sin(angle));
-	s->_fin.setY(b + x * sin(angle) + y * cos(angle));
+	s->_deb.setX((x2 - x1) * cos(angle) - (y2 - y1) * sin(angle) + x1);
+	s->_deb.setY((x2 - x1)*sin(angle) + (y2 - y1)*cos(angle) + y1);
 
 	return s;
 }

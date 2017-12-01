@@ -7,8 +7,9 @@ Compose::Compose() : Forme() { }
 
 Compose::Compose(const string &couleur) : Forme(couleur){ }
 
-Compose::Compose(const Compose& c) : Forme(getCouleur()){ 
-	for (Forme* f : _formes) {
+Compose::Compose(const Compose& c) : Forme(c.getCouleur()){ 
+	
+	for (Forme* f : c._formes) {
 		Forme* temp = f->clone();
 		temp->setCouleur(getCouleur());
 		_formes.push_back(temp);
@@ -74,25 +75,31 @@ void Compose::affiche(ostream &o) const {
 }
 
 Forme* Compose::translation(const Vecteur2D & deplacement)const {
-	Compose* c = new Compose(*this);
-	for (Forme* f : c->_formes) {
-		f = f->translation(deplacement);
+	Compose* c = new Compose();
+	c->setCouleur(getCouleur());
+
+	for (Forme* f : _formes) {
+		c->ajouteForme(*f->translation(deplacement));
 	}
 	return c;
 }
 
 Forme* Compose::rotation(const Vecteur2D & centre, double angle)const {
-	Compose* c = new Compose(*this);
-	for (Forme* f : c->_formes) {
-		f = f->rotation(centre, angle);
+	Compose* c = new Compose();
+	c->setCouleur(getCouleur());
+
+	for (Forme* f : _formes) {
+		c->ajouteForme(*f->rotation(centre, angle));
 	}
 	return c;
 }
 
 Forme* Compose::echelle(const Vecteur2D & centre, double ratio)const {
-	Compose* c = new Compose(*this);
-	for (Forme* f : c->_formes) {
-		f = f->echelle(centre, ratio);
+	Compose* c = new Compose();
+	c->setCouleur(getCouleur());
+
+	for (Forme* f : _formes) {
+		c->ajouteForme(*f->echelle(centre, ratio));
 	}
 	return c;
 }

@@ -84,6 +84,9 @@
     <ClCompile Include="ExpertChargePolygone.cpp">
       <Filter>Fichiers sources\Chaine</Filter>
     </ClCompile>
+    <ClCompile Include="ExpertChargeCompose.cpp">
+      <Filter>Fichiers sources\Chaine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vecteur2D.h">
@@ -141,6 +144,9 @@
       <Filter>Fichiers d%27en-tête\Chaine</Filter>
     </ClInclude>
     <ClInclude Include="ExpertChargePolygone.h">
+      <Filter>Fichiers d%27en-tête\Chaine</Filter>
+    </ClInclude>
+    <ClInclude Include="ExpertChargeCompose.h">
       <Filter>Fichiers d%27en-tête\Chaine</Filter>
     </ClInclude>
   </ItemGroup>

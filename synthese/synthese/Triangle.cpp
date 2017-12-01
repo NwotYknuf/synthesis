@@ -45,9 +45,9 @@ void Triangle::affiche(ostream &os) const{
 const string Triangle::encoder()const {
 	ostringstream oss;
 	oss << "triangle" << "," << getCouleur() << ","
-		<< _p1.getX() << "," << _p1.getY() << ","
-		<< _p2.getX() << "," << _p2.getY() << ","
-		<< _p3.getX() << "," << _p3.getY();
+		<< (int)_p1.getX() << "," << (int)_p1.getY() << ","
+		<< (int)_p2.getX() << "," << (int)_p2.getY() << ","
+		<< (int)_p3.getX() << "," << (int)_p3.getY();
 	return oss.str();
 }
 
@@ -61,25 +61,25 @@ Forme* Triangle::translation(const Vecteur2D &deplacement)const {
 
 Forme* Triangle::rotation(const Vecteur2D &centre, double angle)const {
 	Triangle* t = new Triangle(*this);
-	double a = centre.getX();
-	double b = centre.getY();
-	double x = t->_p1.getX();
-	double y = t->_p1.getY();
+	double x1 = centre.getX();
+	double y1 = centre.getY();
+	double x2 = t->_p1.getX();
+	double y2 = t->_p1.getY();
 	
-	t->_p1.setX(a + x * cos(angle) - y * sin(angle));
-	t->_p1.setY(b + x * sin(angle) + y * cos(angle));
+	t->_p1.setX((x2 - x1) * cos(angle) - (y2-y1) * sin(angle) + x1);
+	t->_p1.setY((x2 - x1)*sin(angle) + (y2 - y1)*cos(angle) + y1);
 
-	x = t->_p2.getX();
-	y = t->_p2.getY();
+	x2 = t->_p2.getX();
+	y2 = t->_p2.getY();
 
-	t->_p2.setX(a + x * cos(angle) - y * sin(angle));
-	t->_p2.setY(b + x * sin(angle) + y * cos(angle));
+	t->_p2.setX((x2 - x1) * cos(angle) - (y2 - y1) * sin(angle) + x1);
+	t->_p2.setY((x2 - x1)*sin(angle) + (y2 - y1)*cos(angle) + y1);
 
-	x = t->_p3.getX();
-	y = t->_p3.getY();
+	x2 = t->_p3.getX();
+	y2 = t->_p3.getY();
 
-	t->_p3.setX(a + x * cos(angle) - y * sin(angle));
-	t->_p3.setY(b + x * sin(angle) + y * cos(angle));
+	t->_p3.setX((x2 - x1) * cos(angle) - (y2 - y1) * sin(angle) + x1);
+	t->_p3.setY((x2 - x1)*sin(angle) + (y2 - y1)*cos(angle) + y1);
 	
 	return t;
 }

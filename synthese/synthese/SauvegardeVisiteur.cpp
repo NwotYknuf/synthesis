@@ -18,9 +18,7 @@ SauvegardeVisiteur::SauvegardeVisiteur(const string& path) {
 	_path = path;
 }
 
-SauvegardeVisiteur::~SauvegardeVisiteur(){
-
-}
+SauvegardeVisiteur::~SauvegardeVisiteur() { }
 
 void SauvegardeVisiteur::sauvegarde(const Forme* f) const{
 	ofstream fichier(_path, ios::trunc);

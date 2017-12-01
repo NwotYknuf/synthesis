@@ -17,7 +17,7 @@ public:
 	Expert* getSuivant() const { return _suivant; }
 	void setSuivant(Expert* suivant) { _suivant = suivant; }
 	
-	virtual Forme* gere(string req) const = 0;
+	virtual Forme* gere(const string &req) const = 0;
 
 };
 

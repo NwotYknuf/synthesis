@@ -7,8 +7,8 @@ Polygone::Polygone() : Forme() { }
 
 Polygone::Polygone(const string& couleur) : Forme(couleur) { }
 
-Polygone::Polygone(const Polygone& q) : Forme(q.getCouleur()) {
-	for (Triangle* t : q._triangles) {
+Polygone::Polygone(const Polygone& p) : Forme(p.getCouleur()) {
+	for (Triangle* t : p._triangles) {
 		_triangles.push_back(new Triangle(*t));
 	}
 }
@@ -73,25 +73,31 @@ void Polygone::affiche(ostream &o) const {
 }
 
 Forme* Polygone::translation(const Vecteur2D & deplacement)const {
-	Polygone* q = new Polygone(*this);
-	for (Triangle* t : q->_triangles) {
-		t = (Triangle*)(t->translation(deplacement));
+	Polygone* p = new Polygone();
+	p->setCouleur(getCouleur());
+
+	for (Triangle* t : _triangles) {
+		p->ajouteTriangle(*(Triangle*)t->translation(deplacement));
 	}
-	return q;
+	return p;
 }
 
 Forme* Polygone::rotation(const Vecteur2D & centre, double angle)const {
-	Polygone* q = new Polygone(*this);
-	for (Triangle* t : q->_triangles) {
-		t = (Triangle*)(t->rotation(centre, angle));
+	Polygone* p = new Polygone();
+	p->setCouleur(getCouleur());
+
+	for (Triangle* t : _triangles) {
+		p->ajouteTriangle(*(Triangle*)t->rotation(centre, angle));
 	}
-	return q;
+	return p;
 }
 
-Forme* Polygone::echelle(const Vecteur2D & centre, double ration)const {
-	Polygone* q = new Polygone(*this);
-	for (Triangle* t : q->_triangles) {
-		t = (Triangle*)(t->echelle(centre, ration));
+Forme* Polygone::echelle(const Vecteur2D & centre, double ratio)const {
+	Polygone* p = new Polygone();
+	p->setCouleur(getCouleur());
+
+	for (Triangle* t : _triangles) {
+		p->ajouteTriangle(*(Triangle*)t->echelle(centre, ratio));
 	}
-	return q;
+	return p;
 }

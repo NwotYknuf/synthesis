@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void split(string str, string splitBy, std::vector<string>& tokens)
+void split(string str, string splitBy, vector<string>& tokens)
 {
 	/* Store the original string in the array, so we can loop the rest
 	* of the algorithm. */
@@ -36,5 +36,40 @@ void split(string str, string splitBy, std::vector<string>& tokens)
 		/* Push everything from the right side of the split to the next empty
 		* index in the vector. */
 		tokens.push_back(frag.substr(splitAt + splitLen, frag.size() - (splitAt + splitLen)));
+	}
+}
+
+void getComposants(string str, char splitDebut, char splitFin, vector<string>& composants) {
+
+	int pos = 0, debut, fin;
+	int hauteur = 0;
+
+	while (pos < str.size()) {
+
+		while (str[pos] != splitDebut && pos < str.size()) {
+			pos++;//On cherche le caractère de début
+		}
+		debut = pos;
+		pos++;
+		if (pos < str.size()) {
+			hauteur++;
+		}
+
+		while (hauteur != 0 && pos < str.size()) {
+			if (str[pos] == splitFin) {
+				hauteur--;
+			}
+			else {
+				if (str[pos] == splitDebut) {
+					hauteur++;
+				}
+			}
+			pos++;
+		}
+		//pos >= longueur de la chaine OU on a trouvé la fin du composant
+		if (pos <= str.size()) {
+			fin = pos;
+			composants.push_back(str.substr(debut + 1, fin - debut - 1));
+		}		
 	}
 }
