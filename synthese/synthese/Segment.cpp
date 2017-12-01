@@ -24,7 +24,7 @@ double Segment::aire()const {
 }
 
 void Segment::affiche(ostream& os)const {
-	os << "Segument" << endl;
+	os << "Segment" << endl;
 	Forme::affiche(os);
 	os << "	-deb : " << _deb << endl;
 	os << "	-fin : " << _fin << endl;
