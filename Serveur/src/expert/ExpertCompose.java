@@ -20,12 +20,11 @@ public class ExpertCompose extends Expert {
 				pos++;//On cherche le caractère de début
 			}
 			debut = pos;
+			hauteur++;
 			pos++;
-			if (pos < str.length()) {
-				hauteur++;
-			}
-
-			while (hauteur != 0 && pos < str.length()) {
+			
+			while (hauteur > 0 && pos < str.length()) {
+				
 				if (str.charAt(pos) == splitFin) {
 					hauteur--;
 				}
@@ -62,7 +61,7 @@ public class ExpertCompose extends Expert {
 	@Override
 	public void gere(String requete) throws Exception {
 		// On récupère les arguments
-		String suiteReq = requete.substring(8, requete.length()-1);
+		String suiteReq = requete.substring(8, requete.length());
 
 		ArrayList<String> composants = getComposants(suiteReq, '[', ']');
 		

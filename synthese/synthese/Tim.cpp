@@ -62,10 +62,6 @@ int main(){
 	PabloPicasso->visite(cmp);
 
 	cout << *cmp << endl;
-	Forme* transforme = (Compose*)cmp->rotation(p4, PI);
-	cout << *transforme;
-
-	PabloPicasso->visite((Compose*)transforme);
 
 	system("pause");
 

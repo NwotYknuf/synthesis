@@ -51,9 +51,7 @@ void getComposants(string str, char splitDebut, char splitFin, vector<string>& c
 		}
 		debut = pos;
 		pos++;
-		if (pos < str.size()) {
-			hauteur++;
-		}
+		hauteur++;
 
 		while (hauteur != 0 && pos < str.size()) {
 			if (str[pos] == splitFin) {
