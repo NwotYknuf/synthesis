@@ -6,7 +6,7 @@
 class Fenetre;
 using namespace std;
 
-class DessineVisiteur : Visiteur {
+class DessineVisiteur : public Visiteur {
 
 private:
 	SOCKET _sock;
